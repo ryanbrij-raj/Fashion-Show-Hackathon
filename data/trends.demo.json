@@ -1,0 +1,2517 @@
+[
+  {
+    "id": "trend_modern-workwear",
+    "name": "Modern Workwear",
+    "slug": "modern-workwear",
+    "description": "Heritage workwear pieces — chore coats, overshirts, canvas trousers — restyled with minimal modern basics instead of full head-to-toe vintage.",
+    "category": "aesthetic",
+    "applicableCategories": [
+      "top",
+      "outerwear",
+      "bottom",
+      "footwear"
+    ],
+    "styleTags": [
+      "workwear",
+      "contemporary",
+      "americana"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "chestnut brown",
+      "olive",
+      "cream"
+    ],
+    "materials": [
+      "corduroy",
+      "canvas",
+      "denim"
+    ],
+    "silhouettes": [
+      "boxy",
+      "relaxed"
+    ],
+    "stylingRules": [
+      "pair heritage outerwear with clean modern basics",
+      "keep footwear simple to modernize a vintage piece"
+    ],
+    "sourceNames": [
+      "GQ",
+      "Highsnobiety",
+      "Esquire"
+    ],
+    "sourceUrls": [
+      "https://www.gq.com",
+      "https://www.highsnobiety.com",
+      "https://www.esquire.com"
+    ],
+    "sourceCount": 3,
+    "trendScore": 83,
+    "recencyScore": 0.85,
+    "crossSourceScore": 0.8,
+    "confidence": 0.87,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_wide-leg-tailored-trousers",
+    "name": "Wide-Leg Tailored Trousers",
+    "slug": "wide-leg-tailored-trousers",
+    "description": "A relaxed, high-rise wide-leg trouser replacing skinny fits as the default tailored bottom.",
+    "category": "silhouette",
+    "applicableCategories": [
+      "bottom"
+    ],
+    "styleTags": [
+      "tailored",
+      "contemporary",
+      "workwear"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "grey",
+      "cream"
+    ],
+    "materials": [
+      "wool blend",
+      "linen"
+    ],
+    "silhouettes": [
+      "wide-leg",
+      "high-rise"
+    ],
+    "stylingRules": [
+      "balance volume with a fitted top",
+      "hem to break just above the shoe"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Who What Wear",
+      "Elle"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.whowhatwear.com",
+      "https://www.elle.com"
+    ],
+    "sourceCount": 3,
+    "trendScore": 83,
+    "recencyScore": 0.8,
+    "crossSourceScore": 0.85,
+    "confidence": 0.89,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_chocolate-brown-tonal-dressing",
+    "name": "Chocolate Brown Tonal Dressing",
+    "slug": "chocolate-brown-tonal-dressing",
+    "description": "Tonal brown dressing — several shades of brown worn together — as a warmer alternative to all-black.",
+    "category": "color",
+    "applicableCategories": [
+      "top",
+      "bottom",
+      "outerwear"
+    ],
+    "styleTags": [
+      "quiet-luxury",
+      "minimal",
+      "classic"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "chocolate brown",
+      "espresso",
+      "tan"
+    ],
+    "materials": [],
+    "silhouettes": [],
+    "stylingRules": [
+      "dress head-to-toe in varying shades of the same brown"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Harper's Bazaar",
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.harpersbazaar.com",
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 3,
+    "trendScore": 78,
+    "recencyScore": 0.75,
+    "crossSourceScore": 0.75,
+    "confidence": 0.85,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_quiet-luxury-basics",
+    "name": "Quiet Luxury Basics",
+    "slug": "quiet-luxury-basics",
+    "description": "Unbranded, high-quality basics in a tonal neutral palette — logo-free dressing that reads expensive through fit and fabric alone.",
+    "category": "aesthetic",
+    "applicableCategories": [
+      "top",
+      "bottom",
+      "outerwear"
+    ],
+    "styleTags": [
+      "quiet-luxury",
+      "minimal",
+      "classic"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "camel",
+      "ivory",
+      "charcoal"
+    ],
+    "materials": [
+      "cashmere",
+      "merino wool",
+      "cotton poplin"
+    ],
+    "silhouettes": [
+      "clean",
+      "tailored"
+    ],
+    "stylingRules": [
+      "invest in fabric quality over logos",
+      "keep palette tonal head to toe"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Harper's Bazaar"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.harpersbazaar.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 77,
+    "recencyScore": 0.7,
+    "crossSourceScore": 0.75,
+    "confidence": 0.85,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_sheer-layering",
+    "name": "Sheer Layering",
+    "slug": "sheer-layering",
+    "description": "Sheer mesh or chiffon tops layered over simple base layers rather than worn alone.",
+    "category": "styling-technique",
+    "applicableCategories": [
+      "top"
+    ],
+    "styleTags": [
+      "romantic",
+      "avant-garde",
+      "contemporary"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "white",
+      "nude"
+    ],
+    "materials": [
+      "mesh",
+      "chiffon"
+    ],
+    "silhouettes": [
+      "fitted base layer"
+    ],
+    "stylingRules": [
+      "layer a sheer top over a fitted tank or bralette",
+      "keep the rest of the outfit simple so the layering reads intentional"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Harper's Bazaar"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.harpersbazaar.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 76,
+    "recencyScore": 0.75,
+    "crossSourceScore": 0.65,
+    "confidence": 0.81,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_chunky-loafers",
+    "name": "Chunky Loafers",
+    "slug": "chunky-loafers",
+    "description": "Lug-sole loafers replacing sleek dress shoes as the default smart-casual shoe.",
+    "category": "footwear",
+    "applicableCategories": [
+      "footwear"
+    ],
+    "styleTags": [
+      "preppy",
+      "contemporary",
+      "quiet-luxury"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "brown",
+      "burgundy"
+    ],
+    "materials": [
+      "leather"
+    ],
+    "silhouettes": [
+      "lug-sole loafer"
+    ],
+    "stylingRules": [
+      "cuff trousers slightly to show the sole"
+    ],
+    "sourceNames": [
+      "GQ",
+      "Highsnobiety",
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.gq.com",
+      "https://www.highsnobiety.com",
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 3,
+    "trendScore": 76,
+    "recencyScore": 0.7,
+    "crossSourceScore": 0.8,
+    "confidence": 0.87,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_western-boots",
+    "name": "Western Boots",
+    "slug": "western-boots",
+    "description": "Pointed-toe western boots continuing to cross over from western wear into everyday styling.",
+    "category": "footwear",
+    "applicableCategories": [
+      "footwear"
+    ],
+    "styleTags": [
+      "western",
+      "vintage",
+      "contemporary"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "brown",
+      "black",
+      "tan"
+    ],
+    "materials": [
+      "leather"
+    ],
+    "silhouettes": [
+      "pointed-toe boot"
+    ],
+    "stylingRules": [
+      "wear with straight-leg denim so the toe is visible"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Who What Wear",
+      "Elle"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.whowhatwear.com",
+      "https://www.elle.com"
+    ],
+    "sourceCount": 3,
+    "trendScore": 76,
+    "recencyScore": 0.7,
+    "crossSourceScore": 0.75,
+    "confidence": 0.85,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_cargo-utility-pants",
+    "name": "Cargo Utility Pants",
+    "slug": "cargo-utility-pants",
+    "description": "Multi-pocket utility cargos holding steady as a streetwear and gorpcore staple.",
+    "category": "garment",
+    "applicableCategories": [
+      "bottom"
+    ],
+    "styleTags": [
+      "streetwear",
+      "techwear",
+      "gorpcore"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "olive",
+      "black",
+      "khaki"
+    ],
+    "materials": [
+      "ripstop nylon",
+      "cotton twill"
+    ],
+    "silhouettes": [
+      "straight-leg with pockets"
+    ],
+    "stylingRules": [
+      "balance utility pockets with a slim top"
+    ],
+    "sourceNames": [
+      "Highsnobiety",
+      "Hypebeast"
+    ],
+    "sourceUrls": [
+      "https://www.highsnobiety.com",
+      "https://hypebeast.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 72,
+    "recencyScore": 0.7,
+    "crossSourceScore": 0.7,
+    "confidence": 0.83,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_oversized-boyfriend-blazers",
+    "name": "Oversized Boyfriend Blazers",
+    "slug": "oversized-boyfriend-blazers",
+    "description": "An intentionally oversized, borrowed-from-the-boyfriend blazer replacing the fitted power blazer.",
+    "category": "silhouette",
+    "applicableCategories": [
+      "outerwear"
+    ],
+    "styleTags": [
+      "tailored",
+      "contemporary",
+      "relaxed"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "grey",
+      "pinstripe"
+    ],
+    "materials": [
+      "wool blend"
+    ],
+    "silhouettes": [
+      "oversized, dropped shoulder"
+    ],
+    "stylingRules": [
+      "roll the sleeves and cinch with a belt to add shape"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 72,
+    "recencyScore": 0.7,
+    "crossSourceScore": 0.65,
+    "confidence": 0.81,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_skate-influenced-streetwear",
+    "name": "Skate-Influenced Streetwear",
+    "slug": "skate-influenced-streetwear",
+    "description": "Baggy, skate-shop-inspired fits — graphic tees, wide denim, flat skate shoes — back in daily streetwear rotation.",
+    "category": "aesthetic",
+    "applicableCategories": [
+      "top",
+      "bottom",
+      "footwear"
+    ],
+    "styleTags": [
+      "skater",
+      "streetwear",
+      "relaxed"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "grey",
+      "graphic print"
+    ],
+    "materials": [
+      "cotton fleece",
+      "canvas"
+    ],
+    "silhouettes": [
+      "baggy"
+    ],
+    "stylingRules": [
+      "pair a graphic tee with baggy denim and skate shoes"
+    ],
+    "sourceNames": [
+      "Highsnobiety",
+      "Hypebeast"
+    ],
+    "sourceUrls": [
+      "https://www.highsnobiety.com",
+      "https://hypebeast.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 71,
+    "recencyScore": 0.7,
+    "crossSourceScore": 0.65,
+    "confidence": 0.81,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_quiet-luxury-trench-coats",
+    "name": "Quiet Luxury Trench Coats",
+    "slug": "quiet-luxury-trench-coats",
+    "description": "The classic belted trench holding steady as quiet luxury's defining outerwear piece.",
+    "category": "garment",
+    "applicableCategories": [
+      "outerwear"
+    ],
+    "styleTags": [
+      "quiet-luxury",
+      "classic",
+      "tailored"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "camel",
+      "black",
+      "navy"
+    ],
+    "materials": [
+      "cotton gabardine"
+    ],
+    "silhouettes": [
+      "classic belted trench"
+    ],
+    "stylingRules": [
+      "belt rather than button for a more relaxed line"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Harper's Bazaar",
+      "GQ"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.harpersbazaar.com",
+      "https://www.gq.com"
+    ],
+    "sourceCount": 3,
+    "trendScore": 70,
+    "recencyScore": 0.6,
+    "crossSourceScore": 0.65,
+    "confidence": 0.81,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_gorpcore-layering",
+    "name": "Gorpcore Layering",
+    "slug": "gorpcore-layering",
+    "description": "Technical outdoor gear — shells, fleece, trail shoes — styled for everyday city wear rather than the trail.",
+    "category": "styling-technique",
+    "applicableCategories": [
+      "outerwear",
+      "footwear"
+    ],
+    "styleTags": [
+      "gorpcore",
+      "techwear",
+      "sporty"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "olive",
+      "orange accent"
+    ],
+    "materials": [
+      "technical shell fabric",
+      "fleece"
+    ],
+    "silhouettes": [
+      "layered technical outerwear"
+    ],
+    "stylingRules": [
+      "layer a technical shell over fleece with trail-inspired footwear"
+    ],
+    "sourceNames": [
+      "Highsnobiety",
+      "Hypebeast"
+    ],
+    "sourceUrls": [
+      "https://www.highsnobiety.com",
+      "https://hypebeast.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 69,
+    "recencyScore": 0.65,
+    "crossSourceScore": 0.65,
+    "confidence": 0.81,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_corset-inspired-tops",
+    "name": "Corset-Inspired Tops",
+    "slug": "corset-inspired-tops",
+    "description": "Structured corset-style tops worn over shirts as daywear rather than reserved for eveningwear.",
+    "category": "garment",
+    "applicableCategories": [
+      "top"
+    ],
+    "styleTags": [
+      "romantic",
+      "avant-garde",
+      "y2k"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "ivory",
+      "red"
+    ],
+    "materials": [
+      "satin",
+      "boned cotton"
+    ],
+    "silhouettes": [
+      "structured bodice"
+    ],
+    "stylingRules": [
+      "wear over a shirt for a daytime take rather than as eveningwear only"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Elle"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.elle.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 68,
+    "recencyScore": 0.6,
+    "crossSourceScore": 0.6,
+    "confidence": 0.79,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_rugby-shirts",
+    "name": "Rugby Shirts",
+    "slug": "rugby-shirts",
+    "description": "Striped, collared rugby shirts as a relaxed alternative to the polo.",
+    "category": "garment",
+    "applicableCategories": [
+      "top"
+    ],
+    "styleTags": [
+      "preppy",
+      "americana",
+      "sporty"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "navy/white stripe",
+      "green/cream stripe"
+    ],
+    "materials": [
+      "cotton pique"
+    ],
+    "silhouettes": [
+      "relaxed, collared"
+    ],
+    "stylingRules": [
+      "wear untucked with tailored trousers to dress it up slightly"
+    ],
+    "sourceNames": [
+      "Who What Wear",
+      "GQ"
+    ],
+    "sourceUrls": [
+      "https://www.whowhatwear.com",
+      "https://www.gq.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 68,
+    "recencyScore": 0.65,
+    "crossSourceScore": 0.6,
+    "confidence": 0.79,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_longline-puffer-coats",
+    "name": "Longline Puffer Coats",
+    "slug": "longline-puffer-coats",
+    "description": "Ankle- or knee-length puffer coats replacing the cropped puffer as winter's default statement outerwear.",
+    "category": "garment",
+    "applicableCategories": [
+      "outerwear"
+    ],
+    "styleTags": [
+      "sporty",
+      "streetwear",
+      "gorpcore"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "cream",
+      "olive"
+    ],
+    "materials": [
+      "nylon",
+      "down fill"
+    ],
+    "silhouettes": [
+      "knee-length or longer puffer"
+    ],
+    "stylingRules": [
+      "belt at the waist to add shape to the volume"
+    ],
+    "sourceNames": [
+      "GQ",
+      "Highsnobiety"
+    ],
+    "sourceUrls": [
+      "https://www.gq.com",
+      "https://www.highsnobiety.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 68,
+    "recencyScore": 0.65,
+    "crossSourceScore": 0.6,
+    "confidence": 0.79,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_cropped-cardigans",
+    "name": "Cropped Cardigans",
+    "slug": "cropped-cardigans",
+    "description": "Cropped button-front cardigans layered over collared shirts or worn alone.",
+    "category": "garment",
+    "applicableCategories": [
+      "top"
+    ],
+    "styleTags": [
+      "preppy",
+      "romantic",
+      "y2k"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "cream",
+      "baby blue",
+      "burgundy"
+    ],
+    "materials": [
+      "knit wool",
+      "cotton knit"
+    ],
+    "silhouettes": [
+      "cropped, button-front"
+    ],
+    "stylingRules": [
+      "pair with high-waisted bottoms to keep proportions balanced"
+    ],
+    "sourceNames": [
+      "Who What Wear",
+      "Elle"
+    ],
+    "sourceUrls": [
+      "https://www.whowhatwear.com",
+      "https://www.elle.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 67,
+    "recencyScore": 0.65,
+    "crossSourceScore": 0.6,
+    "confidence": 0.79,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_barn-jackets",
+    "name": "Barn Jackets",
+    "slug": "barn-jackets",
+    "description": "Canvas barn jackets carrying workwear's heritage appeal into everyday outerwear rotation.",
+    "category": "garment",
+    "applicableCategories": [
+      "outerwear"
+    ],
+    "styleTags": [
+      "workwear",
+      "americana",
+      "vintage"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "tan",
+      "olive",
+      "brown"
+    ],
+    "materials": [
+      "canvas",
+      "corduroy"
+    ],
+    "silhouettes": [
+      "boxy, hip-length"
+    ],
+    "stylingRules": [
+      "layer over a hoodie or knit for a workwear-meets-casual look"
+    ],
+    "sourceNames": [
+      "GQ",
+      "Esquire"
+    ],
+    "sourceUrls": [
+      "https://www.gq.com",
+      "https://www.esquire.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 67,
+    "recencyScore": 0.6,
+    "crossSourceScore": 0.6,
+    "confidence": 0.79,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_baggy-cargo-jeans",
+    "name": "Baggy Cargo Jeans",
+    "slug": "baggy-cargo-jeans",
+    "description": "Baggy denim with cargo pockets combining the wide-leg and utility trends into one silhouette.",
+    "category": "silhouette",
+    "applicableCategories": [
+      "bottom"
+    ],
+    "styleTags": [
+      "streetwear",
+      "skater",
+      "y2k"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "denim blue",
+      "black"
+    ],
+    "materials": [
+      "denim"
+    ],
+    "silhouettes": [
+      "baggy, multi-pocket"
+    ],
+    "stylingRules": [
+      "balance the volume with a slim or cropped top"
+    ],
+    "sourceNames": [
+      "Hypebeast",
+      "Highsnobiety"
+    ],
+    "sourceUrls": [
+      "https://hypebeast.com",
+      "https://www.highsnobiety.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 67,
+    "recencyScore": 0.65,
+    "crossSourceScore": 0.6,
+    "confidence": 0.79,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_cherry-red-accent-color",
+    "name": "Cherry Red Accent Color",
+    "slug": "cherry-red-accent-color",
+    "description": "A specific cherry-red shade used as the season's go-to accent color against neutral outfits.",
+    "category": "color",
+    "applicableCategories": [
+      "top",
+      "outerwear",
+      "accessory"
+    ],
+    "styleTags": [
+      "contemporary",
+      "experimental",
+      "classic"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "cherry red"
+    ],
+    "materials": [],
+    "silhouettes": [],
+    "stylingRules": [
+      "use cherry red in one piece — bag, shoe, or coat — against neutrals"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 67,
+    "recencyScore": 0.65,
+    "crossSourceScore": 0.55,
+    "confidence": 0.77,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_quiet-luxury-cashmere-knits",
+    "name": "Quiet Luxury Cashmere Knits",
+    "slug": "quiet-luxury-cashmere-knits",
+    "description": "Investment-grade cashmere knitwear in a relaxed, unfussy silhouette.",
+    "category": "material",
+    "applicableCategories": [
+      "top"
+    ],
+    "styleTags": [
+      "quiet-luxury",
+      "minimal",
+      "classic"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "camel",
+      "grey",
+      "cream"
+    ],
+    "materials": [
+      "cashmere"
+    ],
+    "silhouettes": [
+      "relaxed crewneck"
+    ],
+    "stylingRules": [
+      "let the fabric be the only statement — keep everything else simple"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Harper's Bazaar"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.harpersbazaar.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 66,
+    "recencyScore": 0.6,
+    "crossSourceScore": 0.55,
+    "confidence": 0.77,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_balletcore-flats",
+    "name": "Balletcore Flats",
+    "slug": "balletcore-flats",
+    "description": "Ribbon-tied ballet flats carried over from balletcore into everyday rotation.",
+    "category": "footwear",
+    "applicableCategories": [
+      "footwear"
+    ],
+    "styleTags": [
+      "romantic",
+      "minimal",
+      "preppy"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "blush",
+      "black",
+      "ivory"
+    ],
+    "materials": [
+      "satin",
+      "leather"
+    ],
+    "silhouettes": [
+      "ribbon-tie flat"
+    ],
+    "stylingRules": [
+      "pair with cropped trousers to show the ribbon detail"
+    ],
+    "sourceNames": [
+      "Elle",
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.elle.com",
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 65,
+    "recencyScore": 0.6,
+    "crossSourceScore": 0.6,
+    "confidence": 0.79,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_sculptural-sunglasses",
+    "name": "Sculptural Sunglasses",
+    "slug": "sculptural-sunglasses",
+    "description": "Oversized, architectural sunglasses used as a standalone statement accessory.",
+    "category": "accessory",
+    "applicableCategories": [
+      "accessory"
+    ],
+    "styleTags": [
+      "avant-garde",
+      "experimental",
+      "contemporary"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "clear",
+      "metallic"
+    ],
+    "materials": [
+      "acetate",
+      "metal"
+    ],
+    "silhouettes": [
+      "oversized, geometric frame"
+    ],
+    "stylingRules": [
+      "let bold sunglasses be the outfit's single statement accessory"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Harper's Bazaar"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.harpersbazaar.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 65,
+    "recencyScore": 0.6,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_y2k-low-rise-revival",
+    "name": "Y2K Low-Rise Revival",
+    "slug": "y2k-low-rise-revival",
+    "description": "Low-rise denim returning from the early 2000s, generally styled with a longer top for balance.",
+    "category": "silhouette",
+    "applicableCategories": [
+      "bottom"
+    ],
+    "styleTags": [
+      "y2k",
+      "streetwear",
+      "experimental"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "denim blue",
+      "black"
+    ],
+    "materials": [
+      "denim"
+    ],
+    "silhouettes": [
+      "low-rise"
+    ],
+    "stylingRules": [
+      "balance a low-rise bottom with a longer top for coverage"
+    ],
+    "sourceNames": [
+      "Elle",
+      "Hypebeast"
+    ],
+    "sourceUrls": [
+      "https://www.elle.com",
+      "https://hypebeast.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 64,
+    "recencyScore": 0.6,
+    "crossSourceScore": 0.55,
+    "confidence": 0.77,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_dopamine-color-palettes",
+    "name": "Dopamine Color Palettes",
+    "slug": "dopamine-color-palettes",
+    "description": "Saturated, mood-boosting color used deliberately as an accent within an otherwise neutral outfit.",
+    "category": "color",
+    "applicableCategories": [
+      "top",
+      "outerwear",
+      "accessory"
+    ],
+    "styleTags": [
+      "experimental",
+      "y2k",
+      "streetwear"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "hot pink",
+      "lime green",
+      "cobalt blue"
+    ],
+    "materials": [],
+    "silhouettes": [],
+    "stylingRules": [
+      "use one saturated color as an accent against neutral basics"
+    ],
+    "sourceNames": [
+      "Elle",
+      "Hypebeast"
+    ],
+    "sourceUrls": [
+      "https://www.elle.com",
+      "https://hypebeast.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 64,
+    "recencyScore": 0.6,
+    "crossSourceScore": 0.55,
+    "confidence": 0.77,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_double-denim-styling",
+    "name": "Double Denim Styling",
+    "slug": "double-denim-styling",
+    "description": "Head-to-toe denim styled with two contrasting washes to avoid looking like a matched set.",
+    "category": "styling-technique",
+    "applicableCategories": [
+      "top",
+      "bottom"
+    ],
+    "styleTags": [
+      "americana",
+      "classic",
+      "contemporary"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "denim blue",
+      "black denim"
+    ],
+    "materials": [
+      "denim"
+    ],
+    "silhouettes": [
+      "contrasting washes"
+    ],
+    "stylingRules": [
+      "mix two different denim washes rather than matching exactly"
+    ],
+    "sourceNames": [
+      "GQ",
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.gq.com",
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 62,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.55,
+    "confidence": 0.77,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_boho-maxi-skirts",
+    "name": "Boho Maxi Skirts",
+    "slug": "boho-maxi-skirts",
+    "description": "Flowing, tiered maxi skirts in natural fabrics returning as a warm-weather staple.",
+    "category": "garment",
+    "applicableCategories": [
+      "bottom"
+    ],
+    "styleTags": [
+      "bohemian",
+      "romantic",
+      "coastal"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "terracotta",
+      "cream",
+      "sage"
+    ],
+    "materials": [
+      "cotton voile",
+      "linen"
+    ],
+    "silhouettes": [
+      "flowing maxi"
+    ],
+    "stylingRules": [
+      "pair with a fitted top to balance the volume"
+    ],
+    "sourceNames": [
+      "Elle",
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.elle.com",
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 61,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.55,
+    "confidence": 0.77,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_mob-wife-maximalism",
+    "name": "Mob Wife Maximalism",
+    "slug": "mob-wife-maximalism",
+    "description": "Glamorous maximalism — fur-look coats, gold jewelry, animal print — worn as a single statement layer over simple basics.",
+    "category": "aesthetic",
+    "applicableCategories": [
+      "outerwear",
+      "accessory"
+    ],
+    "styleTags": [
+      "vintage",
+      "quiet-luxury",
+      "experimental"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "leopard print",
+      "black",
+      "gold"
+    ],
+    "materials": [
+      "faux fur",
+      "leather"
+    ],
+    "silhouettes": [
+      "oversized coat"
+    ],
+    "stylingRules": [
+      "let one maximalist piece (fur coat, animal print) anchor an otherwise simple look"
+    ],
+    "sourceNames": [
+      "Elle",
+      "Harper's Bazaar"
+    ],
+    "sourceUrls": [
+      "https://www.elle.com",
+      "https://www.harpersbazaar.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 61,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_pinstripe-tailoring",
+    "name": "Pinstripe Tailoring",
+    "slug": "pinstripe-tailoring",
+    "description": "Pinstripe suiting fabric moved outside strict business tailoring into separates.",
+    "category": "pattern",
+    "applicableCategories": [
+      "top",
+      "bottom",
+      "outerwear"
+    ],
+    "styleTags": [
+      "tailored",
+      "business",
+      "classic"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "navy pinstripe",
+      "grey pinstripe"
+    ],
+    "materials": [
+      "wool"
+    ],
+    "silhouettes": [
+      "structured tailoring"
+    ],
+    "stylingRules": [
+      "pair a pinstripe blazer with a solid-color base layer"
+    ],
+    "sourceNames": [
+      "GQ",
+      "Esquire"
+    ],
+    "sourceUrls": [
+      "https://www.gq.com",
+      "https://www.esquire.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 61,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_chore-coats",
+    "name": "Chore Coats",
+    "slug": "chore-coats",
+    "description": "The simple four-pocket chore coat continuing as a minimalist workwear staple.",
+    "category": "garment",
+    "applicableCategories": [
+      "outerwear"
+    ],
+    "styleTags": [
+      "workwear",
+      "minimal",
+      "americana"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "ecru",
+      "black",
+      "navy"
+    ],
+    "materials": [
+      "cotton canvas",
+      "denim"
+    ],
+    "silhouettes": [
+      "boxy, four-pocket"
+    ],
+    "stylingRules": [
+      "wear open over a plain tee for an easy workwear layer"
+    ],
+    "sourceNames": [
+      "GQ",
+      "Highsnobiety"
+    ],
+    "sourceUrls": [
+      "https://www.gq.com",
+      "https://www.highsnobiety.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 61,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_preppy-tennis-skirts",
+    "name": "Preppy Tennis Skirts",
+    "slug": "preppy-tennis-skirts",
+    "description": "Pleated tennis-court skirts styled off the court with knitwear rather than athletic tops.",
+    "category": "garment",
+    "applicableCategories": [
+      "bottom"
+    ],
+    "styleTags": [
+      "preppy",
+      "sporty",
+      "classic"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "white",
+      "navy",
+      "pastel"
+    ],
+    "materials": [
+      "pique cotton"
+    ],
+    "silhouettes": [
+      "pleated mini"
+    ],
+    "stylingRules": [
+      "pair with a rugby shirt or fine-knit sweater off the court"
+    ],
+    "sourceNames": [
+      "Who What Wear",
+      "Elle"
+    ],
+    "sourceUrls": [
+      "https://www.whowhatwear.com",
+      "https://www.elle.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 60,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_statement-belts",
+    "name": "Statement Belts",
+    "slug": "statement-belts",
+    "description": "A wide belt with a statement buckle used to define the waist over oversized silhouettes.",
+    "category": "accessory",
+    "applicableCategories": [
+      "accessory"
+    ],
+    "styleTags": [
+      "quiet-luxury",
+      "western",
+      "contemporary"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "gold",
+      "silver",
+      "brown leather"
+    ],
+    "materials": [
+      "leather",
+      "metal"
+    ],
+    "silhouettes": [
+      "wide belt with statement buckle"
+    ],
+    "stylingRules": [
+      "cinch an oversized top or coat to define the waist"
+    ],
+    "sourceNames": [
+      "Elle",
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.elle.com",
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 60,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_ballet-wrap-cardigans",
+    "name": "Ballet-Wrap Cardigans",
+    "slug": "ballet-wrap-cardigans",
+    "description": "A wrap-front cardigan tied at the waist, carried over from balletcore's rise.",
+    "category": "garment",
+    "applicableCategories": [
+      "top"
+    ],
+    "styleTags": [
+      "romantic",
+      "minimal",
+      "y2k"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "blush",
+      "black",
+      "cream"
+    ],
+    "materials": [
+      "knit wool"
+    ],
+    "silhouettes": [
+      "wrap-front cardigan"
+    ],
+    "stylingRules": [
+      "tie at the waist rather than buttoning"
+    ],
+    "sourceNames": [
+      "Elle",
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.elle.com",
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 60,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_sporty-tech-fabrics",
+    "name": "Sporty Tech Fabrics",
+    "slug": "sporty-tech-fabrics",
+    "description": "Performance technical fabrics crossing over from activewear into everyday tailoring.",
+    "category": "material",
+    "applicableCategories": [
+      "top",
+      "bottom"
+    ],
+    "styleTags": [
+      "sporty",
+      "techwear",
+      "contemporary"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "grey",
+      "silver"
+    ],
+    "materials": [
+      "performance nylon",
+      "ripstop"
+    ],
+    "silhouettes": [
+      "athletic-cut"
+    ],
+    "stylingRules": [
+      "mix one technical piece with a tailored piece to avoid looking purely athletic"
+    ],
+    "sourceNames": [
+      "Highsnobiety",
+      "Hypebeast"
+    ],
+    "sourceUrls": [
+      "https://www.highsnobiety.com",
+      "https://hypebeast.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 60,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_upcycled-denim-patchwork",
+    "name": "Upcycled Denim Patchwork",
+    "slug": "upcycled-denim-patchwork",
+    "description": "Garments patchworked from reclaimed denim, worn as a visible sustainability statement.",
+    "category": "material",
+    "applicableCategories": [
+      "top",
+      "bottom",
+      "outerwear"
+    ],
+    "styleTags": [
+      "experimental",
+      "vintage",
+      "streetwear"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "mixed denim washes"
+    ],
+    "materials": [
+      "upcycled denim"
+    ],
+    "silhouettes": [
+      "patchwork construction"
+    ],
+    "stylingRules": [
+      "let the patchwork piece stand alone against solid basics"
+    ],
+    "sourceNames": [
+      "Highsnobiety",
+      "Hypebeast"
+    ],
+    "sourceUrls": [
+      "https://www.highsnobiety.com",
+      "https://hypebeast.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 60,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_moto-leather-jackets",
+    "name": "Moto Leather Jackets",
+    "slug": "moto-leather-jackets",
+    "description": "The asymmetric-zip moto jacket persisting as an outerwear staple across seasons.",
+    "category": "garment",
+    "applicableCategories": [
+      "outerwear"
+    ],
+    "styleTags": [
+      "streetwear",
+      "vintage",
+      "experimental"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "brown"
+    ],
+    "materials": [
+      "leather"
+    ],
+    "silhouettes": [
+      "asymmetric zip moto jacket"
+    ],
+    "stylingRules": [
+      "layer over knitwear rather than a plain tee for texture contrast"
+    ],
+    "sourceNames": [
+      "GQ",
+      "Elle"
+    ],
+    "sourceUrls": [
+      "https://www.gq.com",
+      "https://www.elle.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 59,
+    "recencyScore": 0.5,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_techwear-utility-vests",
+    "name": "Techwear Utility Vests",
+    "slug": "techwear-utility-vests",
+    "description": "Multi-pocket technical vests layered over simple basics for a utilitarian streetwear look.",
+    "category": "garment",
+    "applicableCategories": [
+      "outerwear"
+    ],
+    "styleTags": [
+      "techwear",
+      "streetwear",
+      "gorpcore"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "grey"
+    ],
+    "materials": [
+      "technical nylon"
+    ],
+    "silhouettes": [
+      "multi-pocket vest"
+    ],
+    "stylingRules": [
+      "layer over a simple long-sleeve base"
+    ],
+    "sourceNames": [
+      "Highsnobiety"
+    ],
+    "sourceUrls": [
+      "https://www.highsnobiety.com"
+    ],
+    "sourceCount": 1,
+    "trendScore": 58,
+    "recencyScore": 0.6,
+    "crossSourceScore": 0.4,
+    "confidence": 0.71,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_argyle-knitwear",
+    "name": "Argyle Knitwear",
+    "slug": "argyle-knitwear",
+    "description": "Diamond argyle knitwear returning as preppy dressing's signature pattern.",
+    "category": "pattern",
+    "applicableCategories": [
+      "top"
+    ],
+    "styleTags": [
+      "preppy",
+      "vintage",
+      "classic"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "burgundy",
+      "navy",
+      "cream"
+    ],
+    "materials": [
+      "knit wool"
+    ],
+    "silhouettes": [
+      "fitted sweater vest or crewneck"
+    ],
+    "stylingRules": [
+      "layer over a collared shirt, collar out"
+    ],
+    "sourceNames": [
+      "GQ",
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.gq.com",
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 58,
+    "recencyScore": 0.5,
+    "crossSourceScore": 0.5,
+    "confidence": 0.75,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_statement-collars",
+    "name": "Statement Collars",
+    "slug": "statement-collars",
+    "description": "An exaggerated, oversized collar worn over a sweater as a standalone statement detail.",
+    "category": "silhouette",
+    "applicableCategories": [
+      "top"
+    ],
+    "styleTags": [
+      "romantic",
+      "dark-academia",
+      "avant-garde"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "white",
+      "black",
+      "ivory"
+    ],
+    "materials": [
+      "cotton poplin"
+    ],
+    "silhouettes": [
+      "exaggerated collar"
+    ],
+    "stylingRules": [
+      "let an oversized collar sit over a plain sweater or dress"
+    ],
+    "sourceNames": [
+      "Elle",
+      "Vogue"
+    ],
+    "sourceUrls": [
+      "https://www.elle.com",
+      "https://www.vogue.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 58,
+    "recencyScore": 0.5,
+    "crossSourceScore": 0.45,
+    "confidence": 0.73,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_micro-shorts",
+    "name": "Micro Shorts",
+    "slug": "micro-shorts",
+    "description": "Very short, high-rise shorts continuing the Y2K silhouette revival into warm-weather dressing.",
+    "category": "silhouette",
+    "applicableCategories": [
+      "bottom"
+    ],
+    "styleTags": [
+      "y2k",
+      "sporty",
+      "streetwear"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "denim"
+    ],
+    "materials": [
+      "denim",
+      "cotton twill"
+    ],
+    "silhouettes": [
+      "high-rise micro short"
+    ],
+    "stylingRules": [
+      "balance with tall boots or a longer top"
+    ],
+    "sourceNames": [
+      "Hypebeast",
+      "Elle"
+    ],
+    "sourceUrls": [
+      "https://hypebeast.com",
+      "https://www.elle.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 56,
+    "recencyScore": 0.5,
+    "crossSourceScore": 0.45,
+    "confidence": 0.73,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_grunge-revival-flannel",
+    "name": "Grunge Revival Flannel",
+    "slug": "grunge-revival-flannel",
+    "description": "Oversized plaid flannel shirts returning from '90s grunge into streetwear layering.",
+    "category": "garment",
+    "applicableCategories": [
+      "top",
+      "outerwear"
+    ],
+    "styleTags": [
+      "vintage",
+      "skater",
+      "streetwear"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "red plaid",
+      "black plaid",
+      "green plaid"
+    ],
+    "materials": [
+      "flannel"
+    ],
+    "silhouettes": [
+      "oversized button-down"
+    ],
+    "stylingRules": [
+      "tie around the waist or wear fully unbuttoned over a plain tee"
+    ],
+    "sourceNames": [
+      "Hypebeast",
+      "Highsnobiety"
+    ],
+    "sourceUrls": [
+      "https://hypebeast.com",
+      "https://www.highsnobiety.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 56,
+    "recencyScore": 0.5,
+    "crossSourceScore": 0.45,
+    "confidence": 0.73,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_platform-loafers",
+    "name": "Platform Loafers",
+    "slug": "platform-loafers",
+    "description": "A loafer built on a chunky platform sole, adding height and edge to a classic silhouette.",
+    "category": "footwear",
+    "applicableCategories": [
+      "footwear"
+    ],
+    "styleTags": [
+      "y2k",
+      "contemporary",
+      "experimental"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "brown"
+    ],
+    "materials": [
+      "leather"
+    ],
+    "silhouettes": [
+      "chunky platform sole"
+    ],
+    "stylingRules": [
+      "hem trousers to ankle length to show the platform"
+    ],
+    "sourceNames": [
+      "Who What Wear",
+      "Hypebeast"
+    ],
+    "sourceUrls": [
+      "https://www.whowhatwear.com",
+      "https://hypebeast.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 55,
+    "recencyScore": 0.5,
+    "crossSourceScore": 0.45,
+    "confidence": 0.73,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_micro-bags",
+    "name": "Micro Bags",
+    "slug": "micro-bags",
+    "description": "Impractically small handbags carried as a pure styling accent rather than for storage.",
+    "category": "accessory",
+    "applicableCategories": [
+      "accessory"
+    ],
+    "styleTags": [
+      "y2k",
+      "experimental",
+      "contemporary"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "black",
+      "metallic",
+      "pastel"
+    ],
+    "materials": [
+      "leather"
+    ],
+    "silhouettes": [
+      "tiny handheld bag"
+    ],
+    "stylingRules": [
+      "treat as a styling accent, not for function"
+    ],
+    "sourceNames": [
+      "Vogue",
+      "Elle"
+    ],
+    "sourceUrls": [
+      "https://www.vogue.com",
+      "https://www.elle.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 54,
+    "recencyScore": 0.45,
+    "crossSourceScore": 0.4,
+    "confidence": 0.71,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_ultra-wide-denim",
+    "name": "Ultra-Wide Denim",
+    "slug": "ultra-wide-denim",
+    "description": "An exaggerated wide-leg denim silhouette pushing the wide-leg trend to its most extreme.",
+    "category": "silhouette",
+    "applicableCategories": [
+      "bottom"
+    ],
+    "styleTags": [
+      "streetwear",
+      "experimental",
+      "relaxed"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "denim blue"
+    ],
+    "materials": [
+      "denim"
+    ],
+    "silhouettes": [
+      "extremely wide leg"
+    ],
+    "stylingRules": [
+      "cuff or hem to avoid dragging, keep the top fitted"
+    ],
+    "sourceNames": [
+      "Hypebeast"
+    ],
+    "sourceUrls": [
+      "https://hypebeast.com"
+    ],
+    "sourceCount": 1,
+    "trendScore": 54,
+    "recencyScore": 0.55,
+    "crossSourceScore": 0.35,
+    "confidence": 0.69,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_coastal-grandma",
+    "name": "Coastal Grandma",
+    "slug": "coastal-grandma",
+    "description": "Relaxed, breezy neutral linens and knits evoking an easy coastal off-duty wardrobe.",
+    "category": "aesthetic",
+    "applicableCategories": [
+      "top",
+      "outerwear"
+    ],
+    "styleTags": [
+      "coastal",
+      "classic",
+      "relaxed"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "cream",
+      "navy",
+      "sand"
+    ],
+    "materials": [
+      "linen",
+      "cotton"
+    ],
+    "silhouettes": [
+      "relaxed, breezy"
+    ],
+    "stylingRules": [
+      "layer a linen shirt over a simple tank with wide trousers"
+    ],
+    "sourceNames": [
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 1,
+    "trendScore": 53,
+    "recencyScore": 0.5,
+    "crossSourceScore": 0.4,
+    "confidence": 0.71,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_boxer-shorts-layering",
+    "name": "Boxer Shorts Layering",
+    "slug": "boxer-shorts-layering",
+    "description": "Boxer-style shorts worn as a visible outer layer over tights or trousers rather than underneath.",
+    "category": "styling-technique",
+    "applicableCategories": [
+      "bottom"
+    ],
+    "styleTags": [
+      "y2k",
+      "streetwear",
+      "experimental"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "plaid",
+      "black"
+    ],
+    "materials": [
+      "cotton poplin"
+    ],
+    "silhouettes": [
+      "boxer short worn as outerwear"
+    ],
+    "stylingRules": [
+      "layer boxer shorts over tights or trousers"
+    ],
+    "sourceNames": [
+      "Hypebeast",
+      "Elle"
+    ],
+    "sourceUrls": [
+      "https://hypebeast.com",
+      "https://www.elle.com"
+    ],
+    "sourceCount": 2,
+    "trendScore": 53,
+    "recencyScore": 0.45,
+    "crossSourceScore": 0.4,
+    "confidence": 0.71,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_raw-hem-denim",
+    "name": "Raw-Hem Denim",
+    "slug": "raw-hem-denim",
+    "description": "Denim finished with a raw, frayed hem instead of a clean cuff.",
+    "category": "styling-technique",
+    "applicableCategories": [
+      "bottom"
+    ],
+    "styleTags": [
+      "streetwear",
+      "contemporary",
+      "relaxed"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "denim blue"
+    ],
+    "materials": [
+      "denim"
+    ],
+    "silhouettes": [
+      "frayed, unfinished hem"
+    ],
+    "stylingRules": [
+      "let the hem drag slightly and fray naturally rather than hemming clean"
+    ],
+    "sourceNames": [
+      "Highsnobiety"
+    ],
+    "sourceUrls": [
+      "https://www.highsnobiety.com"
+    ],
+    "sourceCount": 1,
+    "trendScore": 52,
+    "recencyScore": 0.5,
+    "crossSourceScore": 0.35,
+    "confidence": 0.69,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_fringe-trim-detailing",
+    "name": "Fringe Trim Detailing",
+    "slug": "fringe-trim-detailing",
+    "description": "Suede fringe trim on jackets and bags as a western-adjacent detail.",
+    "category": "styling-technique",
+    "applicableCategories": [
+      "outerwear",
+      "accessory"
+    ],
+    "styleTags": [
+      "western",
+      "bohemian",
+      "vintage"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "brown",
+      "black"
+    ],
+    "materials": [
+      "suede"
+    ],
+    "silhouettes": [
+      "fringe-trimmed jacket or bag"
+    ],
+    "stylingRules": [
+      "let fringe be the only statement detail in the outfit"
+    ],
+    "sourceNames": [
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 1,
+    "trendScore": 49,
+    "recencyScore": 0.45,
+    "crossSourceScore": 0.35,
+    "confidence": 0.69,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_lace-trim-layering",
+    "name": "Lace Trim Layering",
+    "slug": "lace-trim-layering",
+    "description": "Delicate lace-trimmed camisoles worn peeking out from underneath open shirts.",
+    "category": "styling-technique",
+    "applicableCategories": [
+      "top"
+    ],
+    "styleTags": [
+      "romantic",
+      "vintage",
+      "bohemian"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "ivory",
+      "black"
+    ],
+    "materials": [
+      "lace"
+    ],
+    "silhouettes": [
+      "lace-trimmed camisole under a shirt"
+    ],
+    "stylingRules": [
+      "let a lace camisole peek out from an unbuttoned shirt"
+    ],
+    "sourceNames": [
+      "Elle"
+    ],
+    "sourceUrls": [
+      "https://www.elle.com"
+    ],
+    "sourceCount": 1,
+    "trendScore": 48,
+    "recencyScore": 0.4,
+    "crossSourceScore": 0.3,
+    "confidence": 0.67,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_batik-inspired-prints",
+    "name": "Batik-Inspired Prints",
+    "slug": "batik-inspired-prints",
+    "description": "Batik-inspired dyed prints appearing across resortwear and warm-weather separates.",
+    "category": "pattern",
+    "applicableCategories": [
+      "top",
+      "bottom"
+    ],
+    "styleTags": [
+      "bohemian",
+      "coastal",
+      "experimental"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "indigo",
+      "rust",
+      "cream"
+    ],
+    "materials": [
+      "cotton",
+      "rayon"
+    ],
+    "silhouettes": [],
+    "stylingRules": [
+      "pair a printed piece with solid neutral basics"
+    ],
+    "sourceNames": [
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 1,
+    "trendScore": 47,
+    "recencyScore": 0.45,
+    "crossSourceScore": 0.3,
+    "confidence": 0.67,
+    "updatedAt": "2026-09-01"
+  },
+  {
+    "id": "trend_bandana-prints",
+    "name": "Bandana Prints",
+    "slug": "bandana-prints",
+    "description": "Paisley bandana print returning as an accent print on scarves and accessories.",
+    "category": "pattern",
+    "applicableCategories": [
+      "top",
+      "accessory"
+    ],
+    "styleTags": [
+      "western",
+      "streetwear",
+      "vintage"
+    ],
+    "genderPresentation": "unisex",
+    "season": [
+      "spring",
+      "summer",
+      "fall",
+      "winter"
+    ],
+    "colors": [
+      "red paisley",
+      "navy paisley"
+    ],
+    "materials": [
+      "cotton"
+    ],
+    "silhouettes": [],
+    "stylingRules": [
+      "use as an accessory (neck scarf, headband) rather than a full print top"
+    ],
+    "sourceNames": [
+      "Who What Wear"
+    ],
+    "sourceUrls": [
+      "https://www.whowhatwear.com"
+    ],
+    "sourceCount": 1,
+    "trendScore": 45,
+    "recencyScore": 0.4,
+    "crossSourceScore": 0.3,
+    "confidence": 0.67,
+    "updatedAt": "2026-09-01"
+  }
+]

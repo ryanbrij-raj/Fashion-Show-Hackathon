@@ -1,0 +1,326 @@
+[
+  {
+    "id": "persona_tyler_the_creator",
+    "name": "Tyler, the Creator",
+    "type": "real_person",
+    "description": "A recurring mix of preppy golf-course references, varsity knitwear, and playful vintage color, worn with confident, boxy proportions.",
+    "styleTags": ["preppy", "streetwear", "vintage", "y2k", "experimental", "americana"],
+    "signaturePieces": ["chunky cardigan", "varsity-style knit", "wide-leg trouser", "bucket hat", "colorful polo", "statement sunglasses"],
+    "colors": ["pastel yellow", "cream", "golf green", "burnt orange", "powder blue"],
+    "materials": ["knit wool", "corduroy", "cotton twill"],
+    "patterns": ["argyle", "colorblock", "solid"],
+    "silhouettes": ["boxy top with wide-leg bottom", "cropped trouser"],
+    "footwear": ["two-tone loafer", "low-top sneaker", "boat shoe"],
+    "accessories": ["bucket hat", "statement sunglasses", "layered necklace"],
+    "layeringRules": ["crewneck sweater over a collared shirt", "outerwear worn open rather than zipped"],
+    "formalityRange": [2, 3],
+    "recurringStylePrinciples": [
+      "mixes preppy tailoring with playful, saturated color",
+      "elevates golf and varsity references instead of logos",
+      "prioritizes texture over branding",
+      "boxy on top, fuller through the leg"
+    ],
+    "confidence": 0.85,
+    "sources": [
+      { "name": "GQ", "url": "https://www.gq.com" },
+      { "name": "Highsnobiety", "url": "https://www.highsnobiety.com" }
+    ]
+  },
+  {
+    "id": "persona_zendaya",
+    "name": "Zendaya",
+    "type": "real_person",
+    "description": "Sharp, architectural tailoring built around a single, committed color story per look, balancing red-carpet drama with clean lines.",
+    "styleTags": ["tailored", "quiet-luxury", "avant-garde", "classic", "contemporary"],
+    "signaturePieces": ["sharp-shouldered blazer", "column gown", "cropped tailored trouser", "structured bodice"],
+    "colors": ["monochrome black", "monochrome white", "jewel tone", "metallic"],
+    "materials": ["silk", "wool crepe", "sequin"],
+    "patterns": ["solid", "subtle sheen"],
+    "silhouettes": ["sharp shoulder tailoring", "column silhouette"],
+    "footwear": ["strappy heel", "sleek boot"],
+    "accessories": ["minimal fine jewelry", "structured handbag"],
+    "layeringRules": ["blazer worn as the statement piece, often with nothing competing underneath"],
+    "formalityRange": [3, 5],
+    "recurringStylePrinciples": [
+      "commits fully to one color story per look",
+      "pairs tailoring with red-carpet drama rather than separating the two",
+      "lets silhouette do the talking before pattern or print",
+      "polished, considered finishing on every hem and seam"
+    ],
+    "confidence": 0.85,
+    "sources": [
+      { "name": "Vogue", "url": "https://www.vogue.com" },
+      { "name": "Harper's Bazaar", "url": "https://www.harpersbazaar.com" }
+    ]
+  },
+  {
+    "id": "persona_asap_rocky",
+    "name": "A$AP Rocky",
+    "type": "real_person",
+    "description": "High-low layering that puts vintage workwear next to designer pieces, in oversized proportions with heavy texture play.",
+    "styleTags": ["streetwear", "avant-garde", "vintage", "experimental", "workwear"],
+    "signaturePieces": ["oversized outerwear", "statement knitwear", "wide-leg denim", "layered chain", "vintage workwear jacket"],
+    "colors": ["earth tone", "denim blue", "burgundy", "camo"],
+    "materials": ["denim", "leather", "corduroy", "fleece"],
+    "patterns": ["plaid", "camo", "colorblock"],
+    "silhouettes": ["oversized top with relaxed bottom"],
+    "footwear": ["chunky boot", "high-top sneaker"],
+    "accessories": ["layered chain", "beanie", "statement ring"],
+    "layeringRules": ["multiple jackets or vests layered together", "mixed, contrasting textures in one look"],
+    "formalityRange": [1, 3],
+    "recurringStylePrinciples": [
+      "high-low mixing of vintage and designer pieces",
+      "oversized proportions throughout",
+      "heavy texture layering over pattern matching",
+      "unexpected accessory placement (chains, beanies) as the finishing note"
+    ],
+    "confidence": 0.8,
+    "sources": [
+      { "name": "GQ", "url": "https://www.gq.com" },
+      { "name": "Esquire", "url": "https://www.esquire.com" }
+    ]
+  },
+  {
+    "id": "persona_timothee_chalamet",
+    "name": "Timothée Chalamet",
+    "type": "real_person",
+    "description": "Androgynous, fitted tailoring that plays sheer or textured fabrics against structure, worn with quiet confidence.",
+    "styleTags": ["avant-garde", "tailored", "romantic", "experimental", "contemporary"],
+    "signaturePieces": ["sheer tailored jacket", "cropped jacket", "statement collar shirt", "fitted trouser", "harness"],
+    "colors": ["monochrome", "jewel tone", "metallic"],
+    "materials": ["silk", "sheer mesh", "leather"],
+    "patterns": ["solid"],
+    "silhouettes": ["fitted or cropped tailoring", "high-waisted trouser"],
+    "footwear": ["pointed boot", "minimal sneaker"],
+    "accessories": ["statement harness", "minimal layered jewelry"],
+    "layeringRules": ["tailored jacket worn with nothing underneath for contrast", "layered fine necklaces"],
+    "formalityRange": [2, 5],
+    "recurringStylePrinciples": [
+      "plays with androgynous silhouettes",
+      "contrasts sheer or soft texture against structure",
+      "keeps everything fitted from the waist down",
+      "off-carpet looks stay simple and quiet by comparison"
+    ],
+    "confidence": 0.8,
+    "sources": [
+      { "name": "GQ", "url": "https://www.gq.com" },
+      { "name": "Vogue", "url": "https://www.vogue.com" }
+    ]
+  },
+  {
+    "id": "persona_princess_diana",
+    "name": "Princess Diana",
+    "type": "real_person",
+    "description": "Approachable elegance built from mixing relaxed sportswear with tailoring — an oversized knit over a fitted skirt, sneakers under a blazer.",
+    "styleTags": ["preppy", "classic", "romantic", "sporty", "quiet-luxury"],
+    "signaturePieces": ["oversized sweater", "cycling short", "tailored blazer", "shoulder-pad jacket", "skirt suit"],
+    "colors": ["primary colors", "pastel", "white"],
+    "materials": ["wool", "cotton", "denim"],
+    "patterns": ["solid", "occasional stripe"],
+    "silhouettes": ["relaxed knitwear with fitted bottom"],
+    "footwear": ["white sneaker", "loafer", "pump"],
+    "accessories": ["statement earring", "crossbody bag", "baseball cap"],
+    "layeringRules": ["oversized knit layered over a collared shirt"],
+    "formalityRange": [2, 4],
+    "recurringStylePrinciples": [
+      "mixes casual sportswear with formal tailoring in the same look",
+      "oversized on top, fitted through the leg",
+      "sneakers used deliberately against dressier pieces",
+      "approachable rather than untouchable elegance"
+    ],
+    "confidence": 0.8,
+    "sources": [
+      { "name": "Vogue", "url": "https://www.vogue.com" },
+      { "name": "Who What Wear", "url": "https://www.whowhatwear.com" }
+    ]
+  },
+  {
+    "id": "persona_steve_jobs",
+    "name": "Steve Jobs",
+    "type": "real_person",
+    "description": "A deliberate personal uniform — the same silhouette repeated daily instead of variety, prized for consistency over trend.",
+    "styleTags": ["minimal", "classic", "contemporary"],
+    "signaturePieces": ["black mock turtleneck", "straight-leg denim", "grey running sneaker"],
+    "colors": ["black", "indigo", "grey"],
+    "materials": ["cotton knit", "denim"],
+    "patterns": ["solid"],
+    "silhouettes": ["fitted top, straight-leg bottom"],
+    "footwear": ["grey running sneaker"],
+    "accessories": [],
+    "layeringRules": ["single layer, rarely a jacket"],
+    "formalityRange": [1, 2],
+    "recurringStylePrinciples": [
+      "a personal uniform repeated daily rather than a rotating wardrobe",
+      "an extremely narrow, near-monochrome palette",
+      "utility valued over trend",
+      "the consistency itself is the signature, not any single item"
+    ],
+    "confidence": 0.85,
+    "sources": [
+      { "name": "Esquire", "url": "https://www.esquire.com" }
+    ]
+  },
+  {
+    "id": "persona_james_bond",
+    "name": "James Bond",
+    "type": "fictional_character",
+    "sourceWork": "James Bond film franchise",
+    "description": "Precision tailoring in a restrained navy-and-charcoal palette — formalwear built for movement, never flash.",
+    "styleTags": ["tailored", "classic", "quiet-luxury"],
+    "signaturePieces": ["peak-lapel suit", "dinner jacket", "crisp dress shirt", "cashmere sweater", "trench coat"],
+    "colors": ["navy", "charcoal", "black", "white"],
+    "materials": ["wool", "cashmere", "cotton poplin"],
+    "patterns": ["solid", "subtle windowpane"],
+    "silhouettes": ["sharp structured tailoring"],
+    "footwear": ["oxford dress shoe"],
+    "accessories": ["dive watch", "cufflinks"],
+    "layeringRules": ["shirt and tie under a structured jacket, waistcoat for eveningwear"],
+    "formalityRange": [4, 5],
+    "recurringStylePrinciples": [
+      "precision tailoring over anything trend-driven",
+      "a deliberately restrained color palette",
+      "formalwear cut for movement with softer, unstructured shoulders",
+      "confidence communicated through fit, never logos"
+    ],
+    "confidence": 0.8,
+    "sources": [
+      { "name": "Esquire", "url": "https://www.esquire.com" },
+      { "name": "GQ", "url": "https://www.gq.com" }
+    ]
+  },
+  {
+    "id": "persona_bruce_wayne",
+    "name": "Bruce Wayne",
+    "type": "fictional_character",
+    "sourceWork": "Batman / DC",
+    "description": "Dark, bespoke tailoring with almost no ornamentation — authority projected through structure and restraint.",
+    "styleTags": ["tailored", "quiet-luxury", "classic", "dark-academia"],
+    "signaturePieces": ["dark bespoke suit", "structured overcoat", "black-tie eveningwear"],
+    "colors": ["black", "charcoal", "midnight blue"],
+    "materials": ["wool", "cashmere"],
+    "patterns": ["solid"],
+    "silhouettes": ["structured shoulder, straight trouser"],
+    "footwear": ["polished oxford"],
+    "accessories": ["minimal cufflinks", "understated watch"],
+    "layeringRules": ["overcoat worn over a full suit"],
+    "formalityRange": [3, 5],
+    "recurringStylePrinciples": [
+      "restraint and precision above all",
+      "a near-total dark monochrome palette",
+      "structured shoulders used to project authority",
+      "understated luxury over any visible branding"
+    ],
+    "confidence": 0.8,
+    "sources": [
+      { "name": "GQ", "url": "https://www.gq.com" }
+    ]
+  },
+  {
+    "id": "persona_tony_stark",
+    "name": "Tony Stark",
+    "type": "fictional_character",
+    "sourceWork": "Iron Man / Marvel",
+    "description": "Smart-casual with an edge — a fitted blazer thrown over a graphic tee, tailored trousers, and a confident accent color.",
+    "styleTags": ["quiet-luxury", "contemporary", "tailored", "techwear"],
+    "signaturePieces": ["fitted blazer", "graphic tee", "tailored trouser", "tinted sunglasses"],
+    "colors": ["black", "red accent", "grey"],
+    "materials": ["wool blend", "cotton"],
+    "patterns": ["solid", "subtle graphic"],
+    "silhouettes": ["fitted blazer over a fitted tee"],
+    "footwear": ["leather sneaker", "dress shoe"],
+    "accessories": ["tinted sunglasses", "statement watch"],
+    "layeringRules": ["blazer worn open over a tee, never buttoned"],
+    "formalityRange": [2, 4],
+    "recurringStylePrinciples": [
+      "mixes tailoring with casual basics rather than choosing one register",
+      "the blazer-over-tee formula as a repeatable signature",
+      "one confident accent color per look",
+      "smart-casual with a deliberate edge"
+    ],
+    "confidence": 0.8,
+    "sources": [
+      { "name": "GQ", "url": "https://www.gq.com" }
+    ]
+  },
+  {
+    "id": "persona_wednesday_addams",
+    "name": "Wednesday Addams",
+    "type": "fictional_character",
+    "sourceWork": "Wednesday / The Addams Family",
+    "description": "Strict monochrome gothic-prep — sharp collars and structured silhouettes with almost no accessories.",
+    "styleTags": ["dark-academia", "classic", "tailored", "minimal"],
+    "signaturePieces": ["peter pan collar blouse", "pleated skirt", "black cardigan", "structured pinafore"],
+    "colors": ["black", "white"],
+    "materials": ["wool", "cotton poplin"],
+    "patterns": ["solid"],
+    "silhouettes": ["structured collar with pleated skirt"],
+    "footwear": ["black mary jane", "combat boot"],
+    "accessories": ["none — braided hair is the signature detail"],
+    "layeringRules": ["cardigan layered over a collared blouse"],
+    "formalityRange": [2, 3],
+    "recurringStylePrinciples": [
+      "an unbroken black-and-white palette",
+      "sharp, structured collars",
+      "a prep-school silhouette subverted with a gothic mood",
+      "minimal accessories so the silhouette does the work"
+    ],
+    "confidence": 0.85,
+    "sources": [
+      { "name": "Vogue", "url": "https://www.vogue.com" }
+    ]
+  },
+  {
+    "id": "persona_miles_morales",
+    "name": "Miles Morales",
+    "type": "fictional_character",
+    "sourceWork": "Spider-Man: Into the Spider-Verse / Across the Spider-Verse",
+    "description": "NYC streetwear with bold color-blocking — a bomber over a graphic hoodie, sneakers as the focal point.",
+    "styleTags": ["streetwear", "sporty", "skater", "contemporary"],
+    "signaturePieces": ["bomber jacket", "graphic hoodie", "jogger", "high-top sneaker", "beanie"],
+    "colors": ["red", "black", "denim blue"],
+    "materials": ["nylon", "cotton fleece", "denim"],
+    "patterns": ["colorblock", "graphic"],
+    "silhouettes": ["relaxed hoodie with a tapered jogger or jean"],
+    "footwear": ["red high-top sneaker"],
+    "accessories": ["beanie", "backpack"],
+    "layeringRules": ["hoodie worn under a bomber jacket"],
+    "formalityRange": [1, 2],
+    "recurringStylePrinciples": [
+      "bold, confident color-blocking",
+      "relaxed streetwear silhouette top to bottom",
+      "sneakers treated as the focal point of the look",
+      "everyday NYC energy over anything precious"
+    ],
+    "confidence": 0.8,
+    "sources": [
+      { "name": "Highsnobiety", "url": "https://www.highsnobiety.com" }
+    ]
+  },
+  {
+    "id": "persona_don_draper",
+    "name": "Don Draper",
+    "type": "fictional_character",
+    "sourceWork": "Mad Men",
+    "description": "Mid-century tailoring precision — grey flannel suiting, a narrow tie, and total sobriety in the palette.",
+    "styleTags": ["tailored", "classic", "business"],
+    "signaturePieces": ["grey flannel suit", "narrow tie", "white dress shirt", "wool overcoat"],
+    "colors": ["grey", "navy", "white"],
+    "materials": ["wool flannel", "cotton poplin"],
+    "patterns": ["solid", "subtle stripe"],
+    "silhouettes": ["structured shoulder, tapered trouser"],
+    "footwear": ["leather oxford"],
+    "accessories": ["tie clip", "wristwatch"],
+    "layeringRules": ["waistcoat under the jacket for formal occasions"],
+    "formalityRange": [3, 5],
+    "recurringStylePrinciples": [
+      "mid-century tailoring precision",
+      "a narrow, disciplined silhouette",
+      "monochrome sobriety over pattern or color",
+      "confidence communicated through fit and restraint, not flash"
+    ],
+    "confidence": 0.8,
+    "sources": [
+      { "name": "Esquire", "url": "https://www.esquire.com" }
+    ]
+  }
+]
