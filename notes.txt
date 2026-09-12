@@ -1,0 +1,54 @@
+Closet Rescue is an AI-powered personal fashion stylist that learns what you own, what styles you like, how you prefer clothes to fit, and what fashion trends are popular right now. Instead of immediately telling you to buy new clothes, it first tries to create better outfits from your existing wardrobe.
+
+The app will let you use live video through Vonage to show it clothing items you own. Gemini analyzes each piece and identifies things like garment type, color, material, silhouette, season, and style. You can build a digital closet simply by holding clothes up to the camera.
+
+From there, the program has four main experiences:
+
+* Rescue My Closet: Show it something you rarely wear, explain why you do not like wearing it, and the AI creates several outfits using that item plus clothes you already own.
+* Style Me Now: Tell the app where you are going, such as a date, party, class, work, dinner, or fashion event. It generates three outfits: a safe option, a current/trendy option, and a more experimental option.
+* Trend Radar: The system maintains a dataset of about 50 current fashion trends gathered from recent fashion sources. It compares those trends against your personal style and closet instead of blindly recommending whatever is popular.
+* Style Like Someone: Enter a real public figure or fictional character, such as Tyler, the Creator, Princess Diana, Bruce Wayne, Wednesday Addams, or Miles Morales. Gemini breaks down what makes that person’s style recognizable and recreates that fashion language using clothes from your own closet.
+
+The user also creates a short Style Profile, choosing aesthetics such as streetwear, minimal, vintage, workwear, preppy, quiet luxury, Y2K, techwear, or experimental. They can optionally enter their normal clothing and shoe sizes plus whether they prefer fitted, regular, relaxed, or oversized clothing. The app uses sizing as a recommendation aid but does not pretend that camera analysis can determine exact body measurements.
+
+The Trend Radar does more than show what is popular. It calculates how relevant each trend is to the individual user. For example, the app could say:
+
+Modern Workwear — 96% match for you
+Trend Signal: 92
+Style Match: 97
+Closet Readiness: 100
+You already own everything you need.
+
+That is one of the main ideas behind the project: someone may already own the pieces necessary to participate in a trend without realizing it.
+
+For Style Like Someone, the app does not simply copy celebrity outfits. It extracts the underlying fashion rules—silhouettes, colors, layering, footwear, accessories, proportions, and recurring garment types—and translates them into the user’s wardrobe. So instead of saying “buy Tyler, the Creator’s cardigan,” it might say:
+
+Your cream cardigan, relaxed brown trousers, loafers, and green cap reproduce the same colorful-prep language using clothes you already own.
+
+Users can choose how heavily they want to follow the inspiration with settings like Subtle, Recognizable, or Iconic.
+
+Once an outfit is selected, the app enters AI Stylist Mode using the live Vonage camera. Gemini guides the person through actually putting the look together:
+
+“Start with the white tee.”
+“Add the overshirt.”
+“Leave the top buttons open.”
+“Roll the sleeves once.”
+“Step back so I can see the whole outfit.”
+
+The user can then press Check My Look, and Gemini analyzes the final outfit and gives styling feedback based only on the clothing and presentation.
+
+At the end, the app produces a polished shareable Look Card, such as:
+
+CLOSET RESCUE
+Inspired by: Tyler, the Creator
+Look: Colorful Prep
+Style Similarity: 86%
+Closet Used: 5/5 pieces already owned
+Trend Match: Modern Prep
+Inspired, not copied.
+
+The overall message of the project is:
+
+Most fashion AI tells you what to buy. Closet Rescue helps you understand and use what you already own.
+
+So the full system combines your closet + your style + your sizing preferences + current trends + fashion inspiration + Gemini AI + live Vonage video to function like a personal stylist that is customized specifically to you.
