@@ -1,4 +1,4 @@
-Closet Rescue is an AI-powered personal fashion stylist that learns what you own, what styles you like, how you prefer clothes to fit, and what fashion trends are popular right now. Instead of immediately telling you to buy new clothes, it first tries to create better outfits from your existing wardrobe.
+The Jerry is an AI-powered personal fashion stylist that learns what you own, what styles you like, how you prefer clothes to fit, and what fashion trends are popular right now. Instead of immediately telling you to buy new clothes, it first tries to create better outfits from your existing wardrobe.
 
 The app will let you use live video through Vonage to show it clothing items you own. Gemini analyzes each piece and identifies things like garment type, color, material, silhouette, season, and style. You can build a digital closet simply by holding clothes up to the camera.
 
