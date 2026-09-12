@@ -1,4 +1,5 @@
-# Closet Co-Shopper
+sty# Closet Co-Shopper
+
 ### An AI Stylist That Can See Your Closet — and See You
 
 **Hackathon:** Fashion-focused app built on Gemini + Vonage APIs
@@ -22,19 +23,19 @@ This project closes that gap. It uses live video for the two moments where stati
 - **Cataloging an entire closet** (nobody photographs 40 items one at a time)
 - **Previewing something you don't own yet** (uploading a photo and waiting is slower than standing in front of a camera)
 
-This also directly fits the hackathon prompt: it combines two of the suggested categories — *virtual try-on rooms* and *AI personal stylists* — into one cohesive product instead of a single standalone demo feature.
+This also directly fits the hackathon prompt: it combines two of the suggested categories — _virtual try-on rooms_ and _AI personal stylists_ — into one cohesive product instead of a single standalone demo feature.
 
 ---
 
 ## 3. Core Flow
 
-**Step 1 — Closet Scan** *(Vonage + Gemini, one-time setup)*
+**Step 1 — Closet Scan** _(Vonage + Gemini, one-time setup)_
 Open the camera and sweep it across your closet in one continuous motion. Gemini samples frames from the live Vonage feed and builds a structured inventory (item type, color, category) — no manual per-item photo uploads.
 
-**Step 2 — Item-Scoped Chat** *(Gemini, chat)*
+**Step 2 — Item-Scoped Chat** _(Gemini, chat)_
 Tap any cataloged item to open a chat scoped to it. Ask "what goes with this," "dress this up for an interview," "something more casual." The co-shopper answers using only your real inventory from Step 1, so every suggestion is something you actually own.
 
-**Step 3 — Try On Something New** *(Vonage + Gemini, on demand)*
+**Step 3 — Try On Something New** _(Vonage + Gemini, on demand)_
 Found something online, or the co-shopper flagged a gap in your closet? Upload a photo of the item. Then either stand in front of the live camera, or upload a photo of yourself — Gemini composites the item onto you either way.
 
 **Step 4 — Loop Back**
@@ -46,20 +47,21 @@ One continuous chat thread ties all four steps together — it's one conversatio
 
 ## 4. Why Vonage Matters Here (not just a checkbox)
 
-The closet scan needs a *sustained* video session — sampling frames continuously as you move the camera — which is a genuinely different technical shape than one-off image uploads, and it's exactly what Vonage's video pipeline is built for. The live try-on option reuses the same session infrastructure rather than requiring a separate build.
+The closet scan needs a _sustained_ video session — sampling frames continuously as you move the camera — which is a genuinely different technical shape than one-off image uploads, and it's exactly what Vonage's video pipeline is built for. The live try-on option reuses the same session infrastructure rather than requiring a separate build.
 
 ---
 
 ## 5. Architecture
 
-| Layer | Choice |
-|---|---|
-| Frontend | React — one camera/chat interface, reused across scan and try-on |
-| Video | Vonage Video API — single-publisher session (just you, no second participant) |
-| AI | Gemini — multimodal calls for closet-item identification, chat/recommendation logic, and image composition for try-on |
-| Backend | Thin Node/Express or NestJS — Vonage token generation, Gemini proxy, in-memory or SQLite-backed closet inventory |
+| Layer    | Choice                                                                                                                |
+| -------- | --------------------------------------------------------------------------------------------------------------------- |
+| Frontend | React — one camera/chat interface, reused across scan and try-on                                                      |
+| Video    | Vonage Video API — single-publisher session (just you, no second participant)                                         |
+| AI       | Gemini — multimodal calls for closet-item identification, chat/recommendation logic, and image composition for try-on |
+| Backend  | Thin Node/Express or NestJS — Vonage token generation, Gemini proxy, in-memory or SQLite-backed closet inventory      |
 
 **Flow diagram:**
+
 ```
 Camera (scan or try-on) → Vonage session → Backend samples frames
        → Gemini (identify / composite) → Chat UI (recommendations)
@@ -92,6 +94,7 @@ Camera (scan or try-on) → Vonage session → Backend samples frames
 12. **Session Recap** — end-of-session summary of everything scanned, tried on, and recommended
 
 ### Explicit Cut List (deprioritize first if time is short)
+
 - True real-time live video generation for try-on (fall back to "snap frame → generate result in a few seconds")
 - Multi-item try-on
 - Fit history / memory
@@ -100,14 +103,15 @@ Camera (scan or try-on) → Vonage session → Backend samples frames
 
 ## 7. One-Day Build Order (team of 3–4)
 
-| Person | Focus |
-|---|---|
-| A | Vonage session + token server; camera streaming working end-to-end |
-| B | Gemini closet-scan logic — sampling frames, accumulating a deduplicated inventory |
-| C | Chat UI + recommendation logic scoped to inventory (build this early — it's the demo safety net even with a hardcoded fake inventory) |
-| D *(if 4)* | Try-on compositing (upload item → live camera or selfie → generated result); wire "what goes with this" back in after a successful try-on |
+| Person     | Focus                                                                                                                                     |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| A          | Vonage session + token server; camera streaming working end-to-end                                                                        |
+| B          | Gemini closet-scan logic — sampling frames, accumulating a deduplicated inventory                                                         |
+| C          | Chat UI + recommendation logic scoped to inventory (build this early — it's the demo safety net even with a hardcoded fake inventory)     |
+| D _(if 4)_ | Try-on compositing (upload item → live camera or selfie → generated result); wire "what goes with this" back in after a successful try-on |
 
 **Suggested sequence across the day:**
+
 1. Vonage session/token server + basic camera streaming
 2. Chat UI with hardcoded inventory (safety net demo, working early)
 3. Gemini closet-scan logic replacing the hardcoded inventory
@@ -126,6 +130,7 @@ Show the flow live: scan a small set of items → ask the chat what goes with on
 ---
 
 ## 9. Open Questions Before Build Day
+
 - How many closet items to pre-stage for a reliable demo (recommend 8–12 curated pieces so the scan is fast and accurate)
 - Which Gemini model/endpoint for image compositing vs. text chat (test both before the event)
 - Fallback plan if live compositing latency is too slow for a smooth demo (static side-by-side comparison as backup)

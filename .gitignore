@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+!.env.example
+private.key
+*.pem
+.DS_Store
+server/data.json
+dist/
+build/

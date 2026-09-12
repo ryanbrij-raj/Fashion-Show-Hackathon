@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Closet Co-Shopper</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Closet Co-Shopper</h1>
+      <p>Scan your closet, ask what goes with anything, try on something new.</p>
+    </div>
+    <button id="open-profile" class="btn-secondary" type="button">⚙ Style Profile</button>
+  </header>
+
+  <dialog id="profile-dialog">
+    <h2>Your Style Profile</h2>
+    <p class="section-hint">Optional sizing context for recommendations — we never infer exact measurements from photos, this is just what you tell us.</p>
+    <form id="profile-form" class="profile-grid">
+      <label>Height <input id="p-height" type="text" placeholder="e.g. 5'7&quot;" /></label>
+      <label>Chest/Bust <input id="p-chest" type="text" placeholder="e.g. 36in" /></label>
+      <label>Waist <input id="p-waist" type="text" placeholder="e.g. 30in" /></label>
+      <label>Hips <input id="p-hips" type="text" placeholder="e.g. 38in" /></label>
+      <label>Shoe size <input id="p-shoe" type="text" placeholder="e.g. 9" /></label>
+      <label>Fit preference
+        <select id="p-fit">
+          <option value="">No preference</option>
+          <option value="fitted">Fitted</option>
+          <option value="regular">Regular</option>
+          <option value="relaxed">Relaxed</option>
+          <option value="oversized">Oversized</option>
+        </select>
+      </label>
+      <div class="dialog-actions">
+        <button type="button" id="close-profile" class="btn-secondary">Cancel</button>
+        <button type="submit" class="btn-primary">Save Profile</button>
+      </div>
+    </form>
+    <p id="profile-status" class="section-hint"></p>
+  </dialog>
+
+  <main>
+    <section id="scan-panel">
+      <h2>Closet Scan</h2>
+      <p class="section-hint">Hold any item up to the camera — no need to see your whole body. It's auto-detected and added below.</p>
+      <div id="camera-wrap">
+        <div id="publisher-container"></div>
+        <div id="body-guide" hidden></div>
+        <div id="framing-caption">Start the camera to begin scanning items</div>
+      </div>
+      <div class="controls">
+        <button id="start-camera" class="btn-primary">Start Camera</button>
+        <button id="toggle-scan" class="btn-secondary" disabled>Pause Auto-Scan</button>
+        <button id="capture-item" class="btn-secondary" disabled>Capture Manually</button>
+        <label class="btn-secondary" for="closet-upload" style="cursor:pointer;">Or Upload a Photo</label>
+        <input id="closet-upload" type="file" accept="image/*" hidden />
+      </div>
+      <div class="controls">
+        <button id="clear-closet" type="button" class="btn-secondary">Clear All Garments</button>
+      </div>
+      <div id="closet-grid" class="grid"></div>
+    </section>
+
+    <section id="chat-panel">
+      <h2>Ask About an Item</h2>
+      <p class="section-hint">One running conversation — tap an item to focus on it, or keep chatting after a try-on.</p>
+      <p id="active-item-label" class="section-hint">Select an item above to focus the chat on it.</p>
+      <div id="chat-log"></div>
+      <div id="quick-replies" class="controls">
+        <button type="button" class="btn-secondary quick-reply" disabled data-message="What goes with this?">What goes with this?</button>
+        <button type="button" class="btn-secondary quick-reply" disabled data-message="How can I dress this up?">Dress it up</button>
+        <button type="button" class="btn-secondary quick-reply" disabled data-message="How can I dress this down?">Dress it down</button>
+        <button type="button" class="btn-secondary quick-reply" disabled data-message="Is this trending right now?">Trending right now?</button>
+        <button type="button" id="pairing-image-btn" class="btn-secondary" disabled>🖼 Show me a pairing picture</button>
+      </div>
+      <form id="chat-form">
+        <input id="chat-input" type="text" placeholder="Or type your own question..." disabled />
+        <button type="submit" class="btn-primary" disabled>Send</button>
+      </form>
+    </section>
+
+    <section id="tryon-panel">
+      <h2>Try On Something New</h2>
+      <p class="section-hint">Pick a garment from your closet (or upload a new one), then use a camera frame or upload a photo of yourself.</p>
+      <div class="controls">
+        <label for="garment-select">Garment: </label>
+        <select id="garment-select">
+          <option value="">Upload a new photo instead ↓</option>
+        </select>
+      </div>
+      <div class="upload-row">
+        <label class="upload-card" for="person-upload">
+          <span class="upload-title">Person photo</span>
+          <span class="upload-sub">Upload a photo</span>
+          <input id="person-upload" type="file" accept="image/*" hidden />
+        </label>
+        <button id="capture-person" type="button" class="btn-secondary">Use Camera Instead (Full Body)</button>
+        <span id="body-check-status" class="section-hint" style="flex-basis:100%;">Click to start a live check — captures automatically once your full outfit is framed.</span>
+        <label class="upload-card" for="garment-upload">
+          <span class="upload-title">Garment photo</span>
+          <span class="upload-sub">Upload the item</span>
+          <input id="garment-upload" type="file" accept="image/*" hidden />
+        </label>
+      </div>
+      <div class="controls">
+        <button id="run-tryon" class="btn-primary">Generate Try-On</button>
+        <button id="live-tryon-toggle" type="button" class="btn-secondary">Start Live Try-On (updates every 10s)</button>
+      </div>
+      <p id="live-tryon-status" class="section-hint"></p>
+      <div id="tryon-result"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/@vonage/client-sdk-video@2.35.2/dist/js/opentok.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
