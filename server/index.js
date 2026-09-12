@@ -9,7 +9,6 @@ import {
   identifyGarments,
   chatAboutItem,
   tryOnComposite,
-  checkFraming,
   checkGarmentFrame,
   suggestPairingsForNewItem,
   normalizeGarmentImage,
@@ -88,17 +87,6 @@ app.post('/api/profile', (req, res) => {
   profile = req.body;
   saveState();
   res.json(profile);
-});
-
-app.post('/api/frame-check', async (req, res) => {
-  try {
-    const { image } = req.body;
-    const result = await checkFraming(image);
-    res.json(result);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: err.message });
-  }
 });
 
 app.post('/api/session', async (req, res) => {
@@ -197,8 +185,11 @@ app.post('/api/closet/:id/pairing-image', async (req, res) => {
 app.post('/api/chat', async (req, res) => {
   try {
     const { itemId, message, history } = req.body;
-    const item = closet.find((c) => c.id === itemId);
-    if (!item) return res.status(404).json({ error: 'Item not found' });
+    let item = null;
+    if (itemId) {
+      item = closet.find((c) => c.id === itemId);
+      if (!item) return res.status(404).json({ error: 'Item not found' });
+    }
     const reply = await chatAboutItem(item, closet, message, history, profile, personPhoto);
     res.json({ reply });
   } catch (err) {

@@ -83,17 +83,18 @@ export async function chatAboutItem(item, closet, message, history = [], profile
   const photoLine = personPhoto
     ? `\nA photo of the user is attached — you may reference their general coloring, style, or vibe to personalize feedback (e.g. how a color might complement them), but never estimate exact body measurements from it.`
     : '';
+  const focusLine = item
+    ? `The user is asking about this specific closet item: ${JSON.stringify(describeItem(item))}.`
+    : `The user has not focused on a specific item — this is a general styling question. Answer it directly using their closet inventory where relevant (e.g. occasion, weather, or "what goes with what" questions).`;
   const parts = [];
   if (personPhoto) parts.push(toPart(personPhoto));
   parts.push({
-    text: `You are a personal stylist. The user is asking about this specific closet item: ${JSON.stringify(
-      describeItem(item)
-    )}.
+    text: `You are a personal stylist. ${focusLine}
 Their full closet inventory:
-${closetSummary}
+${closetSummary || '(empty)'}
 ${profileLine}${photoLine}
 
-Only recommend pairings using items from their real inventory above. Be concise and specific.
+Only recommend pairings using items from their real inventory above. Be concise and specific. You do not have access to real-time data like today's actual weather or current events — if the question depends on that, say so briefly and ask the user to tell you the conditions, rather than guessing.
 
 User question: ${message}`,
   });
@@ -102,30 +103,6 @@ User question: ${message}`,
     contents: [...history, { role: 'user', parts }],
   });
   return response.text;
-}
-
-export async function checkFraming(imageDataUrl) {
-  const response = await ai.models.generateContent({
-    model: TEXT_MODEL,
-    contents: [
-      {
-        role: 'user',
-        parts: [
-          toPart(imageDataUrl),
-          {
-            text: `You are giving live camera-positioning feedback so a full-body outfit photo can be captured. Look at this frame and reply with strict JSON only, no markdown fences:
-{"ready": boolean, "caption": string, "outfitSignature": string}
-
-- "ready": true only if a person is visible head-to-toe (or as close as the frame allows) and reasonably centered/stable.
-- "caption": one short imperative instruction under 8 words if not ready (e.g. "Step back a little", "Move to center", "Show your shoes"), or a short confirmation like "Ready — full outfit visible" if ready.
-- "outfitSignature": a short lowercase comma-separated description of the visible outfit (garment types + colors only), e.g. "blue hoodie, black jeans, white sneakers". Use "none" if no person/outfit is visible.`,
-          },
-        ],
-      },
-    ],
-  });
-  const text = response.text.trim().replace(/^```json\s*|\s*```$/g, '');
-  return JSON.parse(text);
 }
 
 // Turns a messy capture (held up at an angle, worn on a body, cluttered

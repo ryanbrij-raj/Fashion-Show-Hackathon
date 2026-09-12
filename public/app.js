@@ -1,6 +1,9 @@
 const API = '';
 
-let session, publisher;
+// Two fully independent Vonage camera sessions — Closet Scan and Try-On
+// never share a publisher, so starting/using one never affects the other.
+let scanSession, scanPublisher;
+let tryonSession, tryonPublisher;
 const closetItemsById = {};
 let activeItemId = null;
 let chatHistory = [];
@@ -11,20 +14,18 @@ let garmentLoopTimer = null;
 let garmentCheckInFlight = false;
 let seenGarmentSignatures = new Set();
 
-// Try-On: dedicated full-body check loop, only runs while explicitly started.
-let bodyLoopTimer = null;
-let bodyCheckInFlight = false;
-let bodyLoopActive = false;
-let capturedForCurrentFit = false;
-let lastOutfitSignature = null;
-
-const publisherContainer = document.getElementById('publisher-container');
+const scanPublisherContainer = document.getElementById('publisher-container');
+const tryonPublisherContainer = document.getElementById('tryon-publisher-container');
+const startTryOnCameraBtn = document.getElementById('start-tryon-camera');
 const startCameraBtn = document.getElementById('start-camera');
 const toggleScanBtn = document.getElementById('toggle-scan');
 const captureItemBtn = document.getElementById('capture-item');
 const closetUpload = document.getElementById('closet-upload');
 const clearClosetBtn = document.getElementById('clear-closet');
 const closetGrid = document.getElementById('closet-grid');
+const chatClosetGrid = document.getElementById('chat-closet-grid');
+const tryonClosetGrid = document.getElementById('tryon-closet-grid');
+const allClosetGrids = [closetGrid, chatClosetGrid, tryonClosetGrid];
 const activeItemLabel = document.getElementById('active-item-label');
 const chatLog = document.getElementById('chat-log');
 const chatForm = document.getElementById('chat-form');
@@ -40,9 +41,15 @@ const tryonResult = document.getElementById('tryon-result');
 const liveTryOnToggleBtn = document.getElementById('live-tryon-toggle');
 const liveTryOnStatus = document.getElementById('live-tryon-status');
 const framingCaption = document.getElementById('framing-caption');
-const bodyGuide = document.getElementById('body-guide');
 const bodyCheckStatus = document.getElementById('body-check-status');
-const garmentSelect = document.getElementById('garment-select');
+const capturedPersonPreview = document.getElementById('captured-person-preview');
+const tryonCameraWrap = document.getElementById('tryon-camera-wrap');
+const snapCountdownOverlay = document.getElementById('snap-countdown-overlay');
+const selectedGarmentEl = document.getElementById('selected-garment');
+const selectedGarmentImg = document.getElementById('selected-garment-img');
+const selectedGarmentName = document.getElementById('selected-garment-name');
+const clearSelectedGarmentBtn = document.getElementById('clear-selected-garment');
+let selectedGarmentId = null;
 const profileDialog = document.getElementById('profile-dialog');
 const openProfileBtn = document.getElementById('open-profile');
 const closeProfileBtn = document.getElementById('close-profile');
@@ -57,9 +64,19 @@ const profileFields = {
   fitPreference: document.getElementById('p-fit'),
 };
 
+const tabButtons = [...document.querySelectorAll('.tab')];
+const tabPanels = [...document.querySelectorAll('.tab-panel')];
+tabButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    tabButtons.forEach((b) => b.classList.toggle('active', b === btn));
+    tabPanels.forEach((p) => (p.hidden = p.id !== btn.dataset.tab));
+  });
+});
+
 startCameraBtn.addEventListener('click', startVonageSession);
+startTryOnCameraBtn.addEventListener('click', startTryOnCamera);
 toggleScanBtn.addEventListener('click', toggleGarmentScanLoop);
-captureItemBtn.addEventListener('click', () => scanImage(captureFrameDataUrl(), captureItemBtn, 'Capture Manually'));
+captureItemBtn.addEventListener('click', () => scanImage(captureScanFrame(), captureItemBtn, 'Capture Manually'));
 closetUpload.addEventListener('change', async () => {
   const file = closetUpload.files[0];
   if (!file) return;
@@ -73,7 +90,7 @@ quickReplyButtons.forEach((btn) => {
   btn.addEventListener('click', () => sendMessage(btn.dataset.message));
 });
 pairingImageBtn.addEventListener('click', requestPairingImage);
-capturePersonBtn.addEventListener('click', toggleBodyCaptureLoop);
+capturePersonBtn.addEventListener('click', toggleSnapCountdown);
 runTryonBtn.addEventListener('click', runTryOn);
 liveTryOnToggleBtn.addEventListener('click', toggleLiveTryOn);
 
@@ -91,6 +108,15 @@ loadExistingCloset();
     sub.textContent = input.files[0] ? input.files[0].name : 'Upload a photo';
   });
 });
+personUpload.addEventListener('change', () => {
+  // A fresh upload overrides a previously snapped camera photo.
+  if (personUpload.files[0]) capturedPersonPreview.hidden = true;
+});
+garmentUpload.addEventListener('change', () => {
+  // A fresh upload overrides whatever was picked from the closet grid.
+  if (garmentUpload.files[0]) clearSelectedGarment();
+});
+clearSelectedGarmentBtn.addEventListener('click', clearSelectedGarment);
 
 async function startVonageSession() {
   startCameraBtn.disabled = true;
@@ -98,15 +124,15 @@ async function startVonageSession() {
   const res = await fetch(`${API}/api/session`, { method: 'POST' });
   const { apiKey, sessionId, token } = await res.json();
 
-  session = OT.initSession(apiKey, sessionId);
-  publisher = OT.initPublisher(publisherContainer, {
+  scanSession = OT.initSession(apiKey, sessionId);
+  scanPublisher = OT.initPublisher(scanPublisherContainer, {
     width: '100%',
     height: '100%',
     fitMode: 'contain',
     style: { buttonDisplayMode: 'off' },
   });
 
-  session.connect(token, (err) => {
+  scanSession.connect(token, (err) => {
     if (err) {
       console.error('Vonage connect error', err);
       alert('Could not connect to Vonage session: ' + err.message);
@@ -114,10 +140,38 @@ async function startVonageSession() {
       startCameraBtn.textContent = 'Start Camera';
       return;
     }
-    session.publish(publisher);
+    scanSession.publish(scanPublisher);
     startCameraBtn.textContent = 'Camera Live';
     captureItemBtn.disabled = false;
     startGarmentScanLoop();
+  });
+}
+
+async function startTryOnCamera() {
+  startTryOnCameraBtn.disabled = true;
+  startTryOnCameraBtn.textContent = 'Connecting...';
+  const res = await fetch(`${API}/api/session`, { method: 'POST' });
+  const { apiKey, sessionId, token } = await res.json();
+
+  tryonSession = OT.initSession(apiKey, sessionId);
+  tryonPublisher = OT.initPublisher(tryonPublisherContainer, {
+    width: '100%',
+    height: '100%',
+    fitMode: 'contain',
+    style: { buttonDisplayMode: 'off' },
+  });
+
+  tryonSession.connect(token, (err) => {
+    if (err) {
+      console.error('Vonage connect error', err);
+      alert('Could not connect to Vonage session: ' + err.message);
+      startTryOnCameraBtn.disabled = false;
+      startTryOnCameraBtn.textContent = 'Start Camera';
+      return;
+    }
+    tryonSession.publish(tryonPublisher);
+    startTryOnCameraBtn.textContent = 'Camera Live';
+    tryonCameraWrap.classList.add('live');
   });
 }
 
@@ -159,7 +213,7 @@ async function checkGarmentAutoScan() {
   if (garmentCheckInFlight) return;
   garmentCheckInFlight = true;
   try {
-    const image = captureFrameDataUrl();
+    const image = captureScanFrame();
     if (!image) {
       framingCaption.textContent = 'Waiting for camera feed...';
       return;
@@ -215,75 +269,59 @@ async function checkGarmentAutoScan() {
   }
 }
 
-// --- Try-On: dedicated full-body check, only while explicitly toggled on ---
+// --- Try-On: countdown then snap a single frame (no AI framing check —
+// deterministic and doesn't depend on a vision call judging "readiness") ---
 
-function toggleBodyCaptureLoop() {
-  if (bodyLoopActive) {
-    stopBodyCaptureLoop('Cancelled.');
+const SNAP_COUNTDOWN_SECONDS = 5;
+let snapCountdownTimer = null;
+let snapCountdownActive = false;
+
+function toggleSnapCountdown() {
+  if (snapCountdownActive) {
+    cancelSnapCountdown('Cancelled.');
     return;
   }
-  bodyLoopActive = true;
-  capturedForCurrentFit = false;
-  lastOutfitSignature = null;
-  bodyGuide.hidden = false;
-  capturePersonBtn.textContent = 'Cancel Camera Check';
-  bodyCheckStatus.textContent = 'Checking your framing...';
-  bodyLoopTimer = setInterval(checkBodyFraming, 2500);
-  checkBodyFraming();
-}
-
-function stopBodyCaptureLoop(finalMessage) {
-  bodyLoopActive = false;
-  clearInterval(bodyLoopTimer);
-  bodyGuide.hidden = true;
-  capturePersonBtn.textContent = 'Use Camera Instead (Full Body)';
-  if (finalMessage) bodyCheckStatus.textContent = finalMessage;
-}
-
-async function checkBodyFraming() {
-  if (bodyCheckInFlight) return;
-  bodyCheckInFlight = true;
-  try {
-    const image = captureFrameDataUrl();
-    if (!image) {
-      bodyCheckStatus.textContent = 'Waiting for camera feed...';
-      return;
-    }
-    const res = await fetch(`${API}/api/frame-check`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ image }),
-    });
-    const data = await res.json();
-    if (data.error) throw new Error(data.error);
-
-    bodyCheckStatus.textContent = data.caption;
-
-    if (!data.ready || data.outfitSignature === 'none') {
-      capturedForCurrentFit = false;
-      lastOutfitSignature = null;
-      return;
-    }
-
-    const isNewFit =
-      !capturedForCurrentFit ||
-      (lastOutfitSignature && data.outfitSignature !== lastOutfitSignature);
-
-    if (isNewFit) {
-      lastPersonFrame = image;
-      lastOutfitSignature = data.outfitSignature;
-      capturedForCurrentFit = true;
-      const card = personUpload.closest('.upload-card');
-      card.classList.add('filled');
-      card.querySelector('.upload-sub').textContent = 'Auto-captured from camera';
-      stopBodyCaptureLoop('✓ Captured! ' + data.caption);
-    }
-  } catch (err) {
-    console.error('Body framing check failed', err);
-    bodyCheckStatus.textContent = 'Check error: ' + err.message;
-  } finally {
-    bodyCheckInFlight = false;
+  if (!tryonPublisher) {
+    return alert('Start the camera in this Try-On section first.');
   }
+  snapCountdownActive = true;
+  capturePersonBtn.textContent = 'Cancel';
+  snapCountdownOverlay.hidden = false;
+  let remaining = SNAP_COUNTDOWN_SECONDS;
+  snapCountdownOverlay.textContent = remaining;
+  bodyCheckStatus.textContent = 'Step back — get in frame!';
+  snapCountdownTimer = setInterval(() => {
+    remaining -= 1;
+    if (remaining <= 0) {
+      clearInterval(snapCountdownTimer);
+      snapNow();
+      return;
+    }
+    snapCountdownOverlay.textContent = remaining;
+  }, 1000);
+}
+
+function cancelSnapCountdown(message) {
+  snapCountdownActive = false;
+  clearInterval(snapCountdownTimer);
+  snapCountdownOverlay.hidden = true;
+  capturePersonBtn.textContent = '📸 Snap Photo (5s delay)';
+  bodyCheckStatus.textContent = message || '';
+}
+
+function snapNow() {
+  const image = captureTryOnFrame();
+  if (!image) {
+    cancelSnapCountdown('Could not capture — camera feed not ready, try again.');
+    return;
+  }
+  lastPersonFrame = image;
+  capturedPersonPreview.src = image;
+  capturedPersonPreview.hidden = false;
+  const card = personUpload.closest('.upload-card');
+  card.classList.add('filled');
+  card.querySelector('.upload-sub').textContent = 'Captured from camera';
+  cancelSnapCountdown('✓ Captured!');
 }
 
 // Minimum plausible size for a real captured frame's base64 payload — catches
@@ -291,11 +329,19 @@ async function checkBodyFraming() {
 // looks like a valid data URL but fails to decode on Gemini's end.
 const MIN_VALID_IMAGE_LENGTH = 5000;
 
-function captureFrameDataUrl() {
+function captureScanFrame() {
+  return captureFrameDataUrl(scanPublisherContainer, scanPublisher);
+}
+
+function captureTryOnFrame() {
+  return captureFrameDataUrl(tryonPublisherContainer, tryonPublisher);
+}
+
+function captureFrameDataUrl(container, pub) {
   // Canvas capture from the actual <video> element is the reliable path;
   // prefer it over the Vonage SDK's getImgData(), which has been observed
   // to occasionally return corrupt image data.
-  const source = publisherContainer.querySelector('video');
+  const source = container.querySelector('video');
   if (source && source.videoWidth) {
     const canvas = document.createElement('canvas');
     canvas.width = source.videoWidth;
@@ -306,8 +352,8 @@ function captureFrameDataUrl() {
   }
 
   try {
-    if (publisher && publisher.getImgData) {
-      const dataUrl = 'data:image/png;base64,' + publisher.getImgData();
+    if (pub && pub.getImgData) {
+      const dataUrl = 'data:image/png;base64,' + pub.getImgData();
       if (dataUrl.length >= MIN_VALID_IMAGE_LENGTH) return dataUrl;
     }
   } catch (err) {
@@ -341,8 +387,7 @@ async function scanImage(image, btn, idleLabel) {
   }
 }
 
-function renderClosetItem(item) {
-  closetItemsById[item.id] = item;
+function createClosetCard(item) {
   const div = document.createElement('div');
   div.className = 'item';
   div.dataset.id = item.id;
@@ -351,6 +396,7 @@ function renderClosetItem(item) {
     <div class="item-hook"></div>
     <img src="${item.image}" />
     <div class="item-label">${item.name || item.type}</div>
+    <button class="item-tryon" type="button">Try On</button>
   `;
   div.querySelector('img').addEventListener('click', () => selectItem(item));
   div.querySelector('.item-label').addEventListener('click', () => selectItem(item));
@@ -358,12 +404,34 @@ function renderClosetItem(item) {
     e.stopPropagation();
     deleteClosetItem(item.id);
   });
-  closetGrid.appendChild(div);
+  div.querySelector('.item-tryon').addEventListener('click', (e) => {
+    e.stopPropagation();
+    selectGarmentForTryOn(item);
+  });
+  return div;
+}
 
-  const option = document.createElement('option');
-  option.value = item.id;
-  option.textContent = item.name || item.type;
-  garmentSelect.appendChild(option);
+// The closet shows up in all three tabs (Scan, Chat, Try-On) so you can
+// pick an item without switching away from whichever you're using.
+function renderClosetItem(item) {
+  closetItemsById[item.id] = item;
+  allClosetGrids.forEach((grid) => grid.appendChild(createClosetCard(item)));
+}
+
+function selectGarmentForTryOn(item) {
+  selectedGarmentId = item.id;
+  selectedGarmentImg.src = item.image;
+  selectedGarmentName.textContent = item.name || item.type;
+  selectedGarmentEl.hidden = false;
+  garmentUpload.value = '';
+  garmentUpload.closest('.upload-card').classList.remove('filled');
+  garmentUpload.closest('.upload-card').querySelector('.upload-sub').textContent = 'Or upload a new one';
+  document.getElementById('tryon-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function clearSelectedGarment() {
+  selectedGarmentId = null;
+  selectedGarmentEl.hidden = true;
 }
 
 async function deleteClosetItem(id) {
@@ -373,18 +441,9 @@ async function deleteClosetItem(id) {
     console.error('Failed to delete item', err);
   }
   delete closetItemsById[id];
-  const card = closetGrid.querySelector(`.item[data-id="${id}"]`);
-  if (card) card.remove();
-  const option = garmentSelect.querySelector(`option[value="${id}"]`);
-  if (option) option.remove();
-  if (activeItemId === id) {
-    activeItemId = null;
-    activeItemLabel.textContent = 'Select an item above to focus the chat on it.';
-    chatInput.disabled = true;
-    chatSubmit.disabled = true;
-    quickReplyButtons.forEach((btn) => (btn.disabled = true));
-    pairingImageBtn.disabled = true;
-  }
+  document.querySelectorAll(`.item[data-id="${id}"]`).forEach((card) => card.remove());
+  if (selectedGarmentId === id) clearSelectedGarment();
+  if (activeItemId === id) unfocusChatItem();
 }
 
 async function clearAllGarments() {
@@ -396,15 +455,15 @@ async function clearAllGarments() {
     console.error('Failed to clear closet', err);
   }
   Object.keys(closetItemsById).forEach((id) => delete closetItemsById[id]);
-  closetGrid.innerHTML = '';
-  [...garmentSelect.options].forEach((opt) => {
-    if (opt.value) opt.remove();
-  });
+  allClosetGrids.forEach((grid) => (grid.innerHTML = ''));
+  clearSelectedGarment();
   seenGarmentSignatures.clear();
+  unfocusChatItem();
+}
+
+function unfocusChatItem() {
   activeItemId = null;
-  activeItemLabel.textContent = 'Select an item above to focus the chat on it.';
-  chatInput.disabled = true;
-  chatSubmit.disabled = true;
+  activeItemLabel.textContent = 'General chat — ask anything, or tap an item above to focus on it.';
   quickReplyButtons.forEach((btn) => (btn.disabled = true));
   pairingImageBtn.disabled = true;
 }
@@ -425,11 +484,9 @@ function selectItem(item) {
   // not a fresh chat per item.
   activeItemId = item.id;
   activeItemLabel.textContent = `Now focused on: ${item.name || item.type} (${item.color})`;
-  chatInput.disabled = false;
-  chatSubmit.disabled = false;
   quickReplyButtons.forEach((btn) => (btn.disabled = false));
   pairingImageBtn.disabled = false;
-  [...closetGrid.children].forEach((el) =>
+  document.querySelectorAll('.grid .item').forEach((el) =>
     el.classList.toggle('active', el.dataset.id === item.id)
   );
   requestAssessment(item);
@@ -462,7 +519,7 @@ async function sendChatMessage(e) {
 }
 
 async function sendMessage(message) {
-  if (!message || !activeItemId) return;
+  if (!message) return;
   appendChatLine('You', message);
   chatInput.disabled = true;
   chatSubmit.disabled = true;
@@ -470,7 +527,7 @@ async function sendMessage(message) {
     const res = await fetch(`${API}/api/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ itemId: activeItemId, message, history: chatHistory }),
+      body: JSON.stringify({ itemId: activeItemId || null, message, history: chatHistory }),
     });
     const data = await res.json();
     if (data.error) throw new Error(data.error);
@@ -575,8 +632,8 @@ async function saveProfile(e) {
 }
 
 async function getSelectedGarmentImage() {
-  if (garmentSelect.value) {
-    return closetItemsById[garmentSelect.value]?.image || null;
+  if (selectedGarmentId) {
+    return closetItemsById[selectedGarmentId]?.image || null;
   }
   if (garmentUpload.files[0]) {
     return fileToDataUrl(garmentUpload.files[0]);
@@ -647,8 +704,8 @@ async function toggleLiveTryOn() {
     stopLiveTryOn('Stopped.');
     return;
   }
-  if (!publisher) {
-    return alert('Start the camera in the Closet Scan section first — live try-on reuses that feed.');
+  if (!tryonPublisher) {
+    return alert('Start the camera in this Try-On section first.');
   }
   liveTryOnGarmentImage = await getSelectedGarmentImage();
   if (!liveTryOnGarmentImage) {
@@ -677,7 +734,7 @@ async function runLiveTryOnCycle() {
     liveTryOnStatus.textContent = 'Still generating previous update, skipping this tick...';
     return;
   }
-  const frame = captureFrameDataUrl();
+  const frame = captureTryOnFrame();
   if (!frame) {
     liveTryOnStatus.textContent = 'Waiting for camera feed...';
     return;

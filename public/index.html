@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Closet Co-Shopper</title>
+  <title>LYNX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div>
-      <h1>Closet Co-Shopper</h1>
+      <h1>LYNX</h1>
       <p>Scan your closet, ask what goes with anything, try on something new.</p>
     </div>
     <button id="open-profile" class="btn-secondary" type="button">⚙ Style Profile</button>
@@ -41,13 +44,18 @@
     <p id="profile-status" class="section-hint"></p>
   </dialog>
 
+  <nav id="tabs">
+    <button type="button" class="tab active" data-tab="scan-panel">Closet Scan</button>
+    <button type="button" class="tab" data-tab="chat-panel">Ask About an Item</button>
+    <button type="button" class="tab" data-tab="tryon-panel">Try On Something New</button>
+  </nav>
+
   <main>
-    <section id="scan-panel">
+    <section id="scan-panel" class="tab-panel">
       <h2>Closet Scan</h2>
       <p class="section-hint">Hold any item up to the camera — no need to see your whole body. It's auto-detected and added below.</p>
       <div id="camera-wrap">
         <div id="publisher-container"></div>
-        <div id="body-guide" hidden></div>
         <div id="framing-caption">Start the camera to begin scanning items</div>
       </div>
       <div class="controls">
@@ -63,10 +71,11 @@
       <div id="closet-grid" class="grid"></div>
     </section>
 
-    <section id="chat-panel">
-      <h2>Ask About an Item</h2>
-      <p class="section-hint">One running conversation — tap an item to focus on it, or keep chatting after a try-on.</p>
-      <p id="active-item-label" class="section-hint">Select an item above to focus the chat on it.</p>
+    <section id="chat-panel" class="tab-panel" hidden>
+      <h2>Chat With Your Stylist</h2>
+      <p class="section-hint">Ask anything — "what should I wear for the weather today," or tap an item below to focus on it specifically.</p>
+      <div id="chat-closet-grid" class="grid"></div>
+      <p id="active-item-label" class="section-hint">General chat — ask anything, or tap an item above to focus on it.</p>
       <div id="chat-log"></div>
       <div id="quick-replies" class="controls">
         <button type="button" class="btn-secondary quick-reply" disabled data-message="What goes with this?">What goes with this?</button>
@@ -76,19 +85,27 @@
         <button type="button" id="pairing-image-btn" class="btn-secondary" disabled>🖼 Show me a pairing picture</button>
       </div>
       <form id="chat-form">
-        <input id="chat-input" type="text" placeholder="Or type your own question..." disabled />
-        <button type="submit" class="btn-primary" disabled>Send</button>
+        <input id="chat-input" type="text" placeholder="Ask anything — e.g. what should I wear for the weather today?" />
+        <button type="submit" class="btn-primary">Send</button>
       </form>
     </section>
 
-    <section id="tryon-panel">
+    <section id="tryon-panel" class="tab-panel" hidden>
       <h2>Try On Something New</h2>
-      <p class="section-hint">Pick a garment from your closet (or upload a new one), then use a camera frame or upload a photo of yourself.</p>
+      <p class="section-hint">Click "Try On" on any closet item, or upload a new garment below. This camera is separate from the Closet Scan one.</p>
+      <div id="tryon-closet-grid" class="grid"></div>
+      <div id="selected-garment" class="selected-garment" hidden>
+        <img id="selected-garment-img" alt="" />
+        <span id="selected-garment-name"></span>
+        <button id="clear-selected-garment" type="button" class="btn-secondary" title="Clear selection">&times;</button>
+      </div>
+      <div id="tryon-camera-wrap">
+        <div id="tryon-publisher-container"></div>
+        <p id="tryon-camera-hint">Start the camera below to see yourself here.</p>
+        <div id="snap-countdown-overlay" hidden></div>
+      </div>
       <div class="controls">
-        <label for="garment-select">Garment: </label>
-        <select id="garment-select">
-          <option value="">Upload a new photo instead ↓</option>
-        </select>
+        <button id="start-tryon-camera" class="btn-primary">Start Camera</button>
       </div>
       <div class="upload-row">
         <label class="upload-card" for="person-upload">
@@ -96,11 +113,12 @@
           <span class="upload-sub">Upload a photo</span>
           <input id="person-upload" type="file" accept="image/*" hidden />
         </label>
-        <button id="capture-person" type="button" class="btn-secondary">Use Camera Instead (Full Body)</button>
-        <span id="body-check-status" class="section-hint" style="flex-basis:100%;">Click to start a live check — captures automatically once your full outfit is framed.</span>
+        <button id="capture-person" type="button" class="btn-secondary">📸 Snap Photo (5s delay)</button>
+        <span id="body-check-status" class="section-hint" style="flex-basis:100%;">Click, then step back — it captures the live camera frame after a 5 second countdown.</span>
+        <img id="captured-person-preview" hidden alt="Captured person photo" />
         <label class="upload-card" for="garment-upload">
           <span class="upload-title">Garment photo</span>
-          <span class="upload-sub">Upload the item</span>
+          <span class="upload-sub">Or upload a new one</span>
           <input id="garment-upload" type="file" accept="image/*" hidden />
         </label>
       </div>
