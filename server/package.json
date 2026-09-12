@@ -1,0 +1,4 @@
+{
+  "name":"closet-co-shopper-server","private":true,"type":"module","scripts":{"dev":"node --watch src/index.js","start":"node src/index.js"},
+  "dependencies":{"@google/genai":"latest","@vonage/server-sdk":"latest","cors":"latest","dotenv":"latest","express":"latest"}
+}

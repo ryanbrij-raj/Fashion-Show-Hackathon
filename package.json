@@ -1,0 +1,9 @@
+{
+  "name": "closet-co-shopper",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix web install && npm --prefix server install",
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix web run dev\""
+  },
+  "devDependencies": {"concurrently": "latest"}
+}
